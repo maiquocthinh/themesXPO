@@ -542,7 +542,6 @@
 .header-navbar__menu-item.dropdown>a:hover~.dropdown-list,
 .dropdown-list:hover {
     display: block;
-    z-index: 2;
 }
 
 .dropdown-list {
@@ -556,6 +555,7 @@
     border-radius: 4px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+    z-index: 2;
     display: none;
 }
 

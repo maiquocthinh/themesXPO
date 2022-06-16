@@ -101,11 +101,15 @@ menuMobileBtn.addEventListener("click", function() {
     }
 });
 // show dropdown-list in mobile
-let navbarItem = document.querySelectorAll(".header-navbar__menu-item.dropdown>a");
-navbarItem.forEach(function(element) {
+let navbarItems = document.querySelectorAll(".header-navbar__menu-item.dropdown>a");
+navbarItems.forEach(function(element) {
     element.addEventListener("click", function() {
+
         let dropdownList = this.nextElementSibling;
         if (dropdownList.style.display === "none" || dropdownList.style.display === "") {
+            navbarItems.forEach(function(el) {
+                el.nextElementSibling.style.display = "none";
+            });
             dropdownList.style.display = "block";
         } else {
             dropdownList.style.display = "none";
