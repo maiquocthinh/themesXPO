@@ -13,8 +13,8 @@
         referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/owl.theme.custom.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
@@ -183,7 +183,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header-navbar">
+            <div class="header-navbar sm-hidden">
                 <div class="grid wide">
                     <div class="row">
                         <nav class="col col-lg-12 col-md-12 col-sm-0 col-sm-12">
@@ -191,7 +191,7 @@
                                 <li class="header-navbar__menu-item"><a href="/" title="Trang Chủ"><i class="iconify header-navbar__menu-icon" data-icon="dashicons:admin-home"></i><span>Trang Chủ</span></a></li>
                                 <li class="header-navbar__menu-item dropdown">
                                     <a href="javascript:;" title="Thể Loại"><i class="iconify header-navbar__menu-icon" data-icon="dashicons:category"></i><span>Thể Loại</span><span class="iconify header-navbar__menu-icon-down" data-icon="bi:caret-down-fill"></span></a>
-                                    <ul class="dropdown-list">
+                                    <ul class="dropdown-list sm-hidden">
                                         <li><a href="#" title="Cổ Trang - Thần Thoại">Cổ Trang - Thần Thoại</a></li>
                                         <li><a href="#" title="Phim 18+">Phim 18+</a></li>
                                         <li><a href="#" title="Truyền hình">Truyền hình</a></li>
@@ -219,7 +219,7 @@
                                 </li>
                                 <li class="header-navbar__menu-item dropdown">
                                     <a href="javascript:;" title="Quốc Gia"><i class="iconify header-navbar__menu-icon" data-icon="ion:earth"></i><span>Quốc Gia</span><span class="iconify header-navbar__menu-icon-down" data-icon="bi:caret-down-fill"></span></a>
-                                    <ul class="dropdown-list">
+                                    <ul class="dropdown-list sm-hidden">
                                         <li><a href="#" title="Việt Nam">Việt Nam</a></li>
                                         <li><a href="#" title="Úc">Úc</a></li>
                                         <li><a href="#" title="Canada">Canada</a></li>
@@ -252,7 +252,7 @@
         <div class="container grid wide">
             <div class="row sm-gutter">
                 <div class="slider-widget col col-lg-12 col-md-12 col-sm-12">
-                    <div class="xpo-cat">
+                    <div class="xpo-cat xpo-yellow">
                         <div class="section-bar">
                             <h2 class="section-bar__title"><span><i class="iconify section-bar__icon" data-icon="bi:star-fill"></i> Phim Hot</span><i class="skew-left"></i></h2>
                         </div>
@@ -477,7 +477,7 @@
                     </div>
                 </div>
                 <main class="main-content col col-lg-9 col-md-9 col-sm-12">
-                    <section class="xpo-slide-full">
+                    <section class="xpo-slide-full xpo-violet">
                         <ul class="owl-carousel owl-theme xpo-slide-full__list">
                             <li>
                                 <a href="#" title="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)" class="xpo-slide-full__item">
@@ -508,7 +508,7 @@
                             </li>
                         </ul>
                     </section>
-                    <section class="xpo-cat">
+                    <section class="xpo-cat xpo-red">
                         <div class="section-bar">
                             <h2 class="section-bar__title"><span>
                             <i class="iconify section-bar__icon" data-icon="bx:film"></i> Phim Lẻ</span><i class="skew-left"></i></h2>
@@ -823,7 +823,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="xpo-cat">
+                    <section class="xpo-cat xpo-orange">
                         <div class="section-bar">
                             <h2 class="section-bar__title"><span>
                             <i class="iconify section-bar__icon" data-icon="bx:film"></i> Phim Bộ</span><i class="skew-left"></i></h2>
@@ -1138,7 +1138,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="xpo-cat">
+                    <section class="xpo-cat xpo-green">
                         <div class="section-bar">
                             <h2 class="section-bar__title"><span>
                             <i class="iconify section-bar__icon" data-icon="bx:film"></i> Phim Hoạt Hình</span><i class="skew-left"></i></h2>
@@ -1455,7 +1455,7 @@
                     </section>
                 </main>
                 <aside class="sidebar col col-lg-3 col-md-3 col-sm-12">
-                    <div class="sidebar-widget sm-hidden">
+                    <div class="sidebar-widget xpo-violet sm-hidden">
                         <div class="sidebar-widget__section-bar section-bar">
                             <h2 class="section-bar__title">
                                 <span><i class="iconify section-bar__icon" data-icon="ri:movie-line"></i> Phim Sắp Chiếu</span>
@@ -1522,7 +1522,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sidebar-widget">
+                    <div class="sidebar-widget xpo-blue">
                         <div class="sidebar-widget__section-bar section-bar">
                             <h2 class="section-bar__title">
                                 <span><i class="iconify section-bar__icon" data-icon="bx:film"></i> Phim Xem Nhiều</span>
@@ -1531,530 +1531,535 @@
                             </h2>
                         </div>
                         <section class="tab-container">
-                            <ul class="tab-header">
-                                <li id="tab-label-phimle" class="active">Phim Lẻ</li>
-                                <li id="tab-label-phimbo">Phim Bộ</li>
-                                <li id="tab-label-hoathinh">Hoạt Hình</li>
-                            </ul>
-                            <div id="tab-phimle" class="tab-content">
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
+                            <div class="popular-posts">
+                                <ul class="tab-header">
+                                    <li id="tab-label-1" class="active">Phim Lẻ</li>
+                                    <li id="tab-label-2">Phim Bộ</li>
+                                    <li id="tab-label-3">Hoạt Hình</li>
+                                </ul>
+                                <div class="tab-contents">
+                                    <div id="tab-content-1" class="tab-content">
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
 
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
 
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
 
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
 
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
 
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
 
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
 
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
 
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
 
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
 
-                                </div>
-                            </div>
-                            <div id="tab-phimbo" class="tab-content hidden">
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1613042380/Poster-ga-he.jpg" alt="Gã Hề">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Gã Hề">
-                                            <h3>Gã Hề</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Joker</p>
-                                        <p><span class="tab-content__status">HD Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">8.6</span></span>
-                                            <span class="tab-content__year">2019</span>
-                                        </p>
+                                        </div>
                                     </div>
+                                    <div id="tab-content-2" class="tab-content hidden">
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1613042380/Poster-ga-he.jpg" alt="Gã Hề">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Gã Hề">
+                                                    <h3>Gã Hề</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Joker</p>
+                                                <p><span class="tab-content__status">HD Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">8.6</span></span>
+                                                    <span class="tab-content__year">2019</span>
+                                                </p>
+                                            </div>
 
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
                                     </div>
+                                    <div id="tab-content-3" class="tab-content hidden">
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_100,h_143/v1597306188/Poster-rap-pho-dap-pha.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
 
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-content__item">
+                                            <a href="#" class="tab-content__img" title="Nhím Sonic">
+                                                <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                                            </a>
+                                            <div class="tab-content__info">
+                                                <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
+                                                    <h3>Nhím Sonic</h3>
+                                                </a>
+                                                <p class="tab-content__original-name">Sonic The Hedgehog</p>
+                                                <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
+                                                <p>
+                                                    <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
+                                                    <span class="tab-content__year">2020</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
                                     </div>
-
                                 </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
 
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div id="tab-hoathinh" class="tab-content hidden">
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_100,h_143/v1597306188/Poster-rap-pho-dap-pha.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="tab-content__item">
-                                    <a href="#" class="tab-content__img" title="Nhím Sonic">
-                                        <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
-                                    </a>
-                                    <div class="tab-content__info">
-                                        <a href="#" class="tab-content__vn-name" title="Nhím Sonic">
-                                            <h3>Nhím Sonic</h3>
-                                        </a>
-                                        <p class="tab-content__original-name">Sonic The Hedgehog</p>
-                                        <p><span class="tab-content__status">HD Vietsub + Thuyết Minh</span></p>
-                                        <p>
-                                            <span class="tab-content__imdb"><i class="tab-content__imdb-icon"></i><span class="tab-content__imdb-point">6.7</span></span>
-                                            <span class="tab-content__year">2020</span>
-                                        </p>
-                                    </div>
-
-                                </div>
                             </div>
                         </section>
                     </div>
-                    <div class="sidebar-widget">
+                    <div class="sidebar-widget xpo-green">
                         <div class="sidebar-widget__section-bar section-bar">
                             <h2 class="section-bar__title">
                                 <span><i class="iconify section-bar__icon" data-icon="el:tags"></i> Tag Cloud</span>
@@ -2179,7 +2184,7 @@
             </div>
         </div>
         <!-- Scroll Top -->
-        <div id="scroll-top" class="sm-hidden">
+        <div id="scroll-top">
             <i class="iconify scroll-top__icon" data-icon="bi:arrow-up-short"></i>
         </div>
     </div>

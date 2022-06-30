@@ -87,151 +87,122 @@ $(document).ready(function() {
     });
 });
 // show hidden menu in mobile
-let menuMobileBtn = document.querySelector(".menu-mobile__btn");
-menuMobileBtn.addEventListener("click", function() {
-    let headerNavbar = document.querySelector(".header-navbar");
-    if (headerNavbar.style.display === "none" || headerNavbar.style.display === "") {
-        headerNavbar.style.display = "block";
-        document.getElementById("navbar-mobile__icon-list").style.display = "none";
-        document.getElementById("navbar-mobile__icon-close").style.display = "inline-block";
+const menuMobileBtn = document.querySelector(".menu-mobile__btn");
+menuMobileBtn.onclick = function() {
+    const headerNavbar = document.querySelector(".header-navbar");
+    headerNavbar.classList.toggle('sm-hidden');
+    if (headerNavbar.classList.contains('sm-hidden')) {
+        document.querySelector("#navbar-mobile__icon-list").style.display = "inline-block";
+        document.querySelector("#navbar-mobile__icon-close").style.display = "none";
     } else {
-        headerNavbar.style.display = "none";
-        document.getElementById("navbar-mobile__icon-list").style.display = "inline-block";
-        document.getElementById("navbar-mobile__icon-close").style.display = "none";
+        document.querySelector("#navbar-mobile__icon-list").style.display = "none";
+        document.querySelector("#navbar-mobile__icon-close").style.display = "inline-block";
     }
-});
+};
 // show dropdown-list in mobile
-let navbarItems = document.querySelectorAll(".header-navbar__menu-item.dropdown>a");
+const navbarItems = document.querySelectorAll(".header-navbar__menu-item.dropdown>a");
 navbarItems.forEach(function(element) {
-    element.addEventListener("click", function() {
-
-        let dropdownList = this.nextElementSibling;
-        if (dropdownList.style.display === "none" || dropdownList.style.display === "") {
-            navbarItems.forEach(function(el) {
-                el.nextElementSibling.style.display = "none";
-            });
-            dropdownList.style.display = "block";
-        } else {
-            dropdownList.style.display = "none";
+    element.onclick = function() {
+        const dropdownList = this.nextElementSibling;
+        const dropdownListOpen = document.querySelector('.dropdown-list:not(.sm-hidden)');
+        if (dropdownListOpen && dropdownListOpen !== dropdownList) {
+            dropdownListOpen.classList.add('sm-hidden');
         }
-    });
+        dropdownList.classList.toggle('sm-hidden');
+    };
 });
 // show search input in mobile
-let searchMobileBtn = document.querySelector(".search-mobile__btn");
-searchMobileBtn.addEventListener("click", function() {
-    let searchInput = document.querySelector(".header-search");
+const searchMobileBtn = document.querySelector(".search-mobile__btn");
+searchMobileBtn.onclick = function() {
+    const searchInput = document.querySelector(".header-search");
+    searchInput.classList.toggle('sm-hidden');
     if (searchInput.classList.contains("sm-hidden")) {
-        searchInput.classList.remove("sm-hidden");
-        document.getElementById("navbar-mobile__icon-search").style.display = "none";
-        document.getElementById("navbar-mobile__icon-close-search").style.display = "inline-block";
+        document.querySelector("#navbar-mobile__icon-search").style.display = "inline-block";
+        document.querySelector("#navbar-mobile__icon-close-search").style.display = "none";
     } else {
-        searchInput.classList.add("sm-hidden");
-        document.getElementById("navbar-mobile__icon-search").style.display = "inline-block";
-        document.getElementById("navbar-mobile__icon-close-search").style.display = "none";
+        document.querySelector("#navbar-mobile__icon-search").style.display = "none";
+        document.querySelector("#navbar-mobile__icon-close-search").style.display = "inline-block";
     }
-});
+};
 // show login/register in mobile
-let userMobileBtn = document.querySelector(".user-mobile__btn");
-userMobileBtn.addEventListener("click", function() {
-    let authModal = document.querySelector(".auth-modal");
-    if (authModal.classList.contains("hidden")) {
-        authModal.classList.remove("hidden");
-    }
-});
+const userMobileBtn = document.querySelector(".user-mobile__btn");
+userMobileBtn.onclick = function() {
+    const authModal = document.querySelector(".auth-modal");
+    authModal.classList.toggle("hidden");
+};
 // close auth modal
-document.querySelector(".modal-dialog__tabs-close").addEventListener("click", function() {
-    let authModal = document.querySelector(".auth-modal");
+const authModalCloseBtn = document.querySelector(".modal-dialog__tabs-close");
+authModalCloseBtn.onclick = function() {
+    const authModal = document.querySelector(".auth-modal");
     authModal.classList.add("hidden");
-});
-// change tab active
+};
+// change tab active of authModal
 let authModalTabs = document.querySelectorAll(".modal-dialog__tabs-list>li.modal-dialog__tabs-item");
 authModalTabs.forEach(function(element) {
-    element.addEventListener("click", function() {
-        authModalTabs.forEach(function(el) {
-            if (el.classList.contains("active")) {
-                el.classList.remove("active");
-            }
-        });
-        document.querySelectorAll(".modal-dialog__content>div").forEach(function(el) {
-            if (!el.classList.contains("hidden")) {
-                el.classList.add("hidden");
-            }
-        });
+    element.onclick = function() {
+        document.querySelector('.modal-dialog__tabs-item.active').classList.remove("active");
+        document.querySelector(".modal-dialog__content>div:not(.hidden").classList.add("hidden");
+
         this.classList.add("active");
-        if (document.getElementById("modal-dialog__tab-login").classList.contains("active")) {
+
+        if (document.querySelector("#modal-dialog__tab-login").classList.contains("active")) {
             document.querySelector(".modal-dialog__content .modal-login").classList.remove("hidden");
         }
-        if (document.getElementById("modal-dialog__tab-register").classList.contains("active")) {
+        if (document.querySelector("#modal-dialog__tab-register").classList.contains("active")) {
             document.querySelector(".modal-dialog__content .modal-register").classList.remove("hidden");
         }
-    });
+    };
 });
 let forgotUser = document.querySelector(".forgot-user");
-forgotUser.addEventListener("click", function() {
-    document.querySelectorAll(".modal-dialog__content>div").forEach(function(el) {
-        if (!el.classList.contains("hidden")) {
-            el.classList.add("hidden");
-        }
-    });
+forgotUser.onclick = function() {
+    document.querySelector(".modal-dialog__content>div:not(.hidden").classList.add("hidden");
     document.querySelector(".modal-dialog__content .modal-forgot").classList.remove("hidden");
-});
+};
+
 // show auth modal in desktop & tablet
-let btnLogin = document.getElementById("btn-login");
-let btnRegister = document.getElementById("btn-register");
-let authModal = document.querySelector(".auth-modal");
-btnLogin.addEventListener("click", function() {
+const btnLogin = document.querySelector("#btn-login");
+const btnRegister = document.querySelector("#btn-register");
+const authModal = document.querySelector(".auth-modal");
+btnLogin.onclick = function() {
     authModal.classList.remove("hidden");
-    authModalTabs.forEach(function(el) {
-        if (el.classList.contains("active")) {
-            el.classList.remove("active");
-        }
-    });
-    document.querySelectorAll(".modal-dialog__content>div").forEach(function(el) {
-        if (!el.classList.contains("hidden")) {
-            el.classList.add("hidden");
-        }
-    });
-    document.getElementById("modal-dialog__tab-login").classList.add("active");
+
+    document.querySelector('.modal-dialog__tabs-item.active').classList.remove("active");
+    document.querySelector(".modal-dialog__content>div:not(.hidden").classList.add("hidden");
+
+    document.querySelector("#modal-dialog__tab-login").classList.add("active");
     document.querySelector(".modal-dialog__content .modal-login").classList.remove("hidden");
-});
-btnRegister.addEventListener("click", function() {
+};
+btnRegister.onclick = function() {
     authModal.classList.remove("hidden");
-    authModalTabs.forEach(function(el) {
-        if (el.classList.contains("active")) {
-            el.classList.remove("active");
-        }
-    });
-    document.querySelectorAll(".modal-dialog__content>div").forEach(function(el) {
-        if (!el.classList.contains("hidden")) {
-            el.classList.add("hidden");
-        }
-    });
-    document.getElementById("modal-dialog__tab-register").classList.add("active");
+
+    document.querySelector('.modal-dialog__tabs-item.active').classList.remove("active");
+    document.querySelector(".modal-dialog__content>div:not(.hidden").classList.add("hidden");
+
+    document.querySelector("#modal-dialog__tab-register").classList.add("active");
     document.querySelector(".modal-dialog__content .modal-register").classList.remove("hidden");
-});
+};
+
 // change tab top aside
-let asideTopTabs = document.querySelectorAll(".tab-header>li");
-asideTopTabs.forEach(function(element) {
-    element.addEventListener("click", function() {
-        asideTopTabs.forEach(function(el) {
-            if (el.classList.contains("active")) {
-                el.classList.remove("active");
+const popularPosts = document.querySelectorAll('.tab-container .popular-posts');
+popularPosts.forEach(function(popularPost) {
+    const asideTopTabs = popularPost.querySelectorAll(".tab-header>li");
+    asideTopTabs.forEach(function(element) {
+        element.onclick = function() {
+            popularPost.querySelector('.tab-header>li.active').classList.remove("active");
+            popularPost.querySelector(".tab-container .tab-content:not(.hidden)").classList.add("hidden");
+
+            this.classList.add("active");
+
+            if (this === popularPost.querySelector("#tab-label-1")) {
+                popularPost.querySelector("#tab-content-1").classList.remove("hidden");
             }
-        });
-        document.querySelectorAll(".tab-container .tab-content").forEach(function(el) {
-            if (!el.classList.contains("hidden")) {
-                el.classList.add("hidden");
+            if (this === popularPost.querySelector("#tab-label-2")) {
+                popularPost.querySelector("#tab-content-2").classList.remove("hidden");
             }
-        });
-        this.classList.add("active");
-        if (document.getElementById("tab-label-phimle").classList.contains("active")) {
-            document.getElementById("tab-phimle").classList.remove("hidden");
-        }
-        if (document.getElementById("tab-label-phimbo").classList.contains("active")) {
-            document.getElementById("tab-phimbo").classList.remove("hidden");
-        }
-        if (document.getElementById("tab-label-hoathinh").classList.contains("active")) {
-            document.getElementById("tab-hoathinh").classList.remove("hidden");
-        }
+            if (this === popularPost.querySelector("#tab-label-3")) {
+                popularPost.querySelector("#tab-content-3").classList.remove("hidden");
+            }
+        };
     });
+
 });

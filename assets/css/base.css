@@ -350,7 +350,7 @@ a:hover {
 .section-bar__title {
     --height: 40px;
     display: inline-block;
-    color: #ffd14f;
+    color: #d8dbdf;
     text-transform: uppercase;
     font: 2.4rem 'UTMCafetaRegular';
     font-weight: 500;
@@ -444,4 +444,211 @@ a:hover {
     width: 100%;
     height: 100%;
     color: #337ab7;
+}
+
+
+/* Color of component in website*/
+
+
+/* Set ccolor for section bar title*/
+
+.xpo-orange .section-bar__title {
+    color: #FF6907;
+}
+
+.xpo-blue .section-bar__title {
+    color: #02B0E4;
+}
+
+.xpo-red .section-bar__title {
+    color: #FC1A3F;
+}
+
+.xpo-green .section-bar__title {
+    color: #2ECC71;
+}
+
+.xpo-violet .section-bar__title {
+    color: #9B59B6;
+}
+
+.xpo-yellow .section-bar__title {
+    color: #FFC146;
+}
+
+
+/* set color of view-more btn */
+
+.xpo-orange .section-bar__view-more:hover {
+    background-color: #FF6907 !important;
+}
+
+.xpo-blue .section-bar__view-more:hover {
+    background-color: #02B0E4 !important;
+}
+
+.xpo-red .section-bar__view-more:hover {
+    background-color: #FC1A3F !important;
+}
+
+.xpo-green .section-bar__view-more:hover {
+    background-color: #2ECC71 !important;
+}
+
+.xpo-violet .section-bar__view-more:hover {
+    background-color: #9B59B6 !important;
+}
+
+.xpo-yellow .section-bar__view-more:hover {
+    background-color: #FFC146 !important;
+}
+
+.xpo-orange .section-bar__view-more:hover::before {
+    border-right-color: #FF6907 !important;
+}
+
+.xpo-blue .section-bar__view-more:hover::before {
+    border-right-color: #02B0E4 !important;
+}
+
+.xpo-red .section-bar__view-more:hover::before {
+    border-right-color: #FC1A3F !important;
+}
+
+.xpo-green .section-bar__view-more:hover::before {
+    border-right-color: #2ECC71 !important;
+}
+
+.xpo-violet .section-bar__view-more:hover::before {
+    border-right-color: #9B59B6 !important;
+}
+
+.xpo-yellow .section-bar__view-more:hover::before {
+    border-right-color: #FFC146 !important;
+}
+
+
+/* Set ccolor for section bar skew-left*/
+
+.xpo-orange .skew-left {
+    background-color: #FF6907 !important;
+}
+
+.xpo-blue .skew-left {
+    background-color: #02B0E4 !important;
+}
+
+.xpo-red .skew-left {
+    background-color: #FC1A3F !important;
+}
+
+.xpo-green .skew-left {
+    background-color: #2ECC71 !important;
+}
+
+.xpo-violet .skew-left {
+    background-color: #9B59B6 !important;
+}
+
+.xpo-yellow .skew-left {
+    background-color: #FFC146 !important;
+}
+
+
+/* Set ccolor for section button prev&next*/
+
+.xpo-orange .owl-carousel .owl-nav button.owl-next,
+.xpo-orange .owl-carousel .owl-nav button.owl-prev {
+    background: #FF6907 !important;
+    opacity: 0.75 !important;
+}
+
+.xpo-blue .owl-carousel .owl-nav button.owl-next,
+.xpo-blue .owl-carousel .owl-nav button.owl-prev {
+    background: #02B0E4 !important;
+    opacity: 0.75 !important;
+}
+
+.xpo-red .owl-carousel .owl-nav button.owl-next,
+.xpo-red .owl-carousel .owl-nav button.owl-prev {
+    background: #FC1A3F !important;
+    opacity: 0.75 !important;
+}
+
+.xpo-green .owl-carousel .owl-nav button.owl-next,
+.xpo-green .owl-carousel .owl-nav button.owl-prev {
+    background: #2ECC71 !important;
+    opacity: 0.75 !important;
+}
+
+.xpo-violet .owl-carousel .owl-nav button.owl-next,
+.xpo-violet .owl-carousel .owl-nav button.owl-prev {
+    background: #9B59B6 !important;
+    opacity: 0.75 !important;
+}
+
+.xpo-yellow .owl-carousel .owl-nav button.owl-next,
+.xpo-yellow .owl-carousel .owl-nav button.owl-prev {
+    background: #FFC146 !important;
+    opacity: 0.75 !important;
+}
+
+
+/* Set ccolor for section button prev&next*/
+
+.xpo-orange .owl-theme .owl-dots .owl-dot.active span,
+.xpo-orange .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #FF6907 !important;
+}
+
+.xpo-blue .owl-theme .owl-dots .owl-dot.active span,
+.xpo-blue .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #02B0E4 !important;
+}
+
+.xpo-red .owl-theme .owl-dots .owl-dot.active span,
+.xpo-red .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #FC1A3F !important;
+}
+
+.xpo-green .owl-theme .owl-dots .owl-dot.active span,
+.xpo-green .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #2ECC71 !important;
+}
+
+.xpo-violet .owl-theme .owl-dots .owl-dot.active span,
+.xpo-violet .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #9B59B6 !important;
+}
+
+.xpo-yellow .owl-theme .owl-dots .owl-dot.active span,
+.xpo-yellow .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #FFC146 !important;
+}
+
+
+/* Set ccolor for title hover of xpo-slide-full*/
+
+.xpo-orange .xpo-slide-full__title:hover {
+    color: #FF6907 !important;
+}
+
+.xpo-blue .xpo-slide-full__title:hover {
+    color: #02B0E4 !important;
+}
+
+.xpo-red .xpo-slide-full__title:hover {
+    color: #FC1A3F !important;
+}
+
+.xpo-green .xpo-slide-full__title:hover {
+    color: #2ECC71 !important;
+}
+
+.xpo-violet .xpo-slide-full__title:hover {
+    color: #9B59B6 !important;
+}
+
+.xpo-yellow .xpo-slide-full__title:hover {
+    color: #FFC146 !important;
 }
