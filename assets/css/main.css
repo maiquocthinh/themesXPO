@@ -1133,3 +1133,121 @@
 .header-navbar nav {
     display: block !important;
 }
+
+/* XPO Mini Info Films */
+.xpo-mini-info {
+    position: absolute;
+    background-color: #ffffff;
+    max-width: 320px;
+    border-radius: 4px;
+    padding: 12px;
+    z-index: 3;
+    animation-name: zoomIn;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3)
+    }
+    50% {
+        opacity: 1
+    }
+}
+
+.xpo-mini-info::before {
+    content: '';
+    display: block;
+    border: 8px solid;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    top: -15px;
+    left: 45px;
+}
+
+.xpo-mini-info__name {
+    display: block;
+    color: #ff9800;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 2px 0;
+}
+
+.xpo-mini-info__original-name {
+    display: block;
+    color: #3f5664;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 2px 0;
+}
+
+.xpo-mini-info__info {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 6px 0;
+}
+
+.xpo-mini-info__imdb {
+    color: #ecbd12;
+}
+
+.xpo-mini-info__imdb .icon-imdb {
+    font-size: 1.6rem;
+    margin-right: 2px;
+    color: #e9b51b;
+}
+
+.xpo-mini-info__imdb,
+.xpo-mini-info__duration,
+.xpo-mini-info__year {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.xpo-mini-info__duration .icon-access-time,
+.xpo-mini-info__year .icon-calender {
+    font-size: 1.2rem;
+    margin-right: 2px;
+}
+
+.xpo-mini-info__description {
+    font-size: 1.2rem;
+}
+
+.xpo-mini-info__short-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.xpo-mini-info__countries .icon-country,
+.xpo-mini-info__categories .icon-category,
+.xpo-mini-info__actors .icon-actor {
+    font-size: 1.6rem;
+    color: #e9b51b;
+    vertical-align: middle;
+    padding-right: 2px;
+}
+
+.xpo-mini-info__countries span,
+.xpo-mini-info__categories span,
+.xpo-mini-info__actors span {
+    color: #78909c;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.xpo-mini-info__countries,
+.xpo-mini-info__categories,
+.xpo-mini-info__actors {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 2px 0;
+}
