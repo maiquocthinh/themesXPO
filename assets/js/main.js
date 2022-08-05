@@ -415,5 +415,7 @@ modals.forEach((modal) => {
     const btnCloseModal = modal.querySelector('.modal-close-btn');
     btnCloseModal.onclick = function () {
         modal.classList.add('hidden');
+        // stop video iframe if this is playing
+        modal.querySelector('iframe').src = modal.querySelector('iframe').src;
     }
 });
