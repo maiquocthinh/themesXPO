@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-rating-svg@3.5.0/src/css/star-rating-svg.css">
+</head>
+
+<body>
+  <div class="my-rating"></div>
+  <span class="live-rating"></span>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/star-rating-svg@3.5.0/src/jquery.star-rating-svg.js"></script>
+  <script>
+    function scoreToText(score) {
+      switch (score) {
+        case 1:
+            return "Dở tệ";
+        case 2:
+            return "Dở";
+        case 3:
+            return "Không hay";
+        case 4:
+            return "Ko hay lắm";
+        case 5:
+            return "Bình thường";
+        case 6:
+            return "Xem được";
+        case 7:
+            return "Có vẻ hay";
+        case 8:
+            return "Hay";
+        case 9:
+            return "Rất hay";
+        case 10:
+            return "Hay tuyệt";
+      }
+    }
+
+    function ratingFilm(initRating = 5) {
+      $(".my-rating").starRating({
+        initialRating: initRating / 2,
+        totalStars: 5,
+        starSize: 50,
+        strokeWidth: 6,
+        strokeColor: 'black',
+        emptyColor: 'lightgray',
+        hoverColor: 'crimson',
+        activeColor: 'crimson',
+        useGradient: false,
+        onHover: function(currentIndex, currentRating, $el) {
+          $('.live-rating').text(scoreToText(currentIndex * 2));
+        },
+        onLeave: function(currentIndex, currentRating, $el) {
+          $('.live-rating').text(scoreToText(currentRating * 2));
+        },
+        callback: function(currentRating, ratingElement) {
+            const ratingPoint = currentRating * 2;
+            // do somthing with ratingPoint....
+        },
+      });
+    }
+    ratingFilm(1);
+  </script>
+</body>
+
+</html>

@@ -71,6 +71,57 @@ $('.xpo-slide-full__list').owlCarousel({
     dotsEach: true,
     items: 1,
 });
+$('.xpo-list-cast').owlCarousel({
+    margin: 24,
+    nav: true,
+    navText: ['<i class="iconify" data-icon="fa:chevron-left"></i>', '<i class="iconify" data-icon="fa:chevron-right"></i>'],
+    responsive: {
+        0: {
+            items: 4,
+        },
+        700: {
+            items: 5,
+        },
+        1024: {
+            items: 6,
+        }
+    }
+});
+$('.xpo-film-content__images').owlCarousel({
+    loop: true,
+    margin: 6,
+    nav: true,
+    navText: ['<i class="iconify" data-icon="fa:chevron-left"></i>', '<i class="iconify" data-icon="fa:chevron-right"></i>'],
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    dots: false,
+    items: 1,
+});
+$('#xpo-film-related__list').owlCarousel({
+    loop: true,
+    margin: 6,
+    nav: true,
+    navText: ['<i class="iconify" data-icon="fa:chevron-left"></i>', '<i class="iconify" data-icon="fa:chevron-right"></i>'],
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    dotsEach: true,
+    responsive: {
+        0: {
+            items: 2
+        },
+        480: {
+            items: 3
+        },
+        600: {
+            items: 4
+        },
+        900: {
+            items: 5
+        }
+    }
+});
 $(document).ready(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 0) {
@@ -208,8 +259,8 @@ popularPosts.forEach(function (popularPost) {
 });
 
 // fill infoFilm to xpoMiniInfo
-function fillDataToXpoMiniInfo(xpoMiniInfo, infoFilm){
-    if(infoFilm){
+function fillDataToXpoMiniInfo(xpoMiniInfo, infoFilm) {
+    if (infoFilm) {
         xpoMiniInfo.querySelector('.xpo-mini-info__name').textContent = infoFilm.dataset.name;
         xpoMiniInfo.querySelector('.xpo-mini-info__original-name').textContent = infoFilm.dataset.originalName;
         xpoMiniInfo.querySelector('.xpo-mini-info__imdb').lastChild.textContent = infoFilm.dataset.imdb;
@@ -234,7 +285,7 @@ xpoMiniInfo.onmouseover = function () {
 xpoItems.forEach(function (xpoItem) {
     // get info of film
     const infoFilm = xpoItem.querySelector('.xpo-mini-info__data');
-    
+
     // handle hiden/show when mouseover/mouseout
     xpoItem.onmouseover = function () {
         fillDataToXpoMiniInfo(xpoMiniInfo, infoFilm)
@@ -246,5 +297,123 @@ xpoItems.forEach(function (xpoItem) {
     }
     xpoItem.onmouseleave = function () {
         xpoMiniInfo.style.display = 'none';
+    }
+});
+
+// rating film
+function scoreToText(score) {
+    switch (score) {
+        case 1:
+            return "Dở tệ";
+        case 2:
+            return "Dở";
+        case 3:
+            return "Không hay";
+        case 4:
+            return "Ko hay lắm";
+        case 5:
+            return "Bình thường";
+        case 6:
+            return "Xem được";
+        case 7:
+            return "Có vẻ hay";
+        case 8:
+            return "Hay";
+        case 9:
+            return "Rất hay";
+        case 10:
+            return "Hay tuyệt";
+    }
+}
+function ratingFilm(initRating = 5) {
+    $('.rating-label').text(scoreToText(initRating * 2));
+    $("#film-rating").starRating({
+        initialRating: initRating / 2,
+        totalStars: 5,
+        starSize: 16,
+        strokeWidth: 6,
+        strokeColor: 'black',
+        emptyColor: 'lightgray',
+        hoverColor: 'crimson',
+        activeColor: 'crimson',
+        useGradient: false,
+        onHover: function (currentIndex, currentRating, $el) {
+            $('.rating-label').text(scoreToText(currentIndex * 2));
+        },
+        onLeave: function (currentIndex, currentRating, $el) {
+            $('.rating-label').text(scoreToText(currentRating * 2));
+        },
+        callback: function (currentRating, ratingElement) {
+            const ratingPoint = currentRating * 2;
+            // do somthing with ratingPoint....
+        },
+    });
+}
+ratingFilm();
+
+// add film to boxfilm and follow film
+const btnFollowFilm = document.querySelector(".xpo-film-info button.poster__follow");
+const btnBookmarkFilm = document.querySelector(".xpo-film-info button.poster__bookmark");
+
+btnFollowFilm.onclick = function () {
+    const iconFollowFilm = btnFollowFilm.querySelector('.iconify');
+    const labelFollowFilm = btnFollowFilm.querySelector('.poster__follow-label');
+    if (iconFollowFilm.dataset.icon === iconFollowFilm.dataset.iconAdd) {
+        iconFollowFilm.dataset.icon = iconFollowFilm.dataset.iconRemove;
+        labelFollowFilm.textContent = labelFollowFilm.dataset.msgRemove;
+        btnFollowFilm.title = labelFollowFilm.dataset.msgRemove;
+
+        // make somthing when follow film....
+    } else if (iconFollowFilm.dataset.icon === iconFollowFilm.dataset.iconRemove) {
+        iconFollowFilm.dataset.icon = iconFollowFilm.dataset.iconAdd;
+        labelFollowFilm.textContent = labelFollowFilm.dataset.msgAdd;
+        btnFollowFilm.title = labelFollowFilm.dataset.msgAdd;
+
+        // make somthing when unfollow film....
+    }
+}
+btnBookmarkFilm.onclick = function () {
+    const iconBookmarkFilm = btnBookmarkFilm.querySelector('.iconify');
+    const labelBookmarkFilm = btnBookmarkFilm.querySelector('.poster__bookmark-label');
+    if (iconBookmarkFilm.dataset.icon === iconBookmarkFilm.dataset.iconAdd) {
+        iconBookmarkFilm.dataset.icon = iconBookmarkFilm.dataset.iconRemove;
+        labelBookmarkFilm.textContent = labelBookmarkFilm.dataset.msgRemove;
+        btnBookmarkFilm.title = labelBookmarkFilm.dataset.msgRemove;
+
+        // make somthing when add film to bookmark....
+    } else if (iconBookmarkFilm.dataset.icon === iconBookmarkFilm.dataset.iconRemove) {
+        iconBookmarkFilm.dataset.icon = iconBookmarkFilm.dataset.iconAdd;
+        labelBookmarkFilm.textContent = labelBookmarkFilm.dataset.msgAdd;
+        btnBookmarkFilm.title = labelBookmarkFilm.dataset.msgAdd;
+
+        // make somthing when remove film form bookmark....
+    }
+}
+
+// showmore/shiwless film content
+const contentBox = document.querySelector('.xpo-film-content__box');
+const toggleBtnContent = document.querySelector('.xpo-film-content__btn-toggle button');
+
+toggleBtnContent.onclick = function () {
+    contentBox.classList.toggle('collapse');
+    if (contentBox.classList.contains('collapse')) {
+        toggleBtnContent.textContent = toggleBtnContent.dataset.showmore;
+    } else {
+        toggleBtnContent.textContent = toggleBtnContent.dataset.showless;
+
+    }
+}
+
+// Trailer modal popup show
+function showTrailer(){
+    document.querySelector('#trailer-popup').classList.remove('hidden');
+}
+
+// Modal popup
+const modals = document.querySelectorAll('.modal');
+modals.forEach((modal) => {
+    const btnCloseModal = modal.querySelector('.modal-close-btn');
+    btnCloseModal.onclick = function () {
+        modal.classList.add('hidden');
     }
 });

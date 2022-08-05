@@ -66,18 +66,28 @@ a:hover {
     text-shadow: none;
 }
 
-
+/* html wrap */
+.htmlwrap {
+    padding: 5px 10px;
+    border: 1px solid #18232e;
+    margin: 5px 0;
+    background: #0e141b99;
+}
 /* Button */
 
 .btn {
     display: inline-flex;
     justify-content: center;
     background-color: #224361;
+    text-decoration: none;
     color: var(--white-color);
     font-size: 1.4rem;
     height: 32px;
     min-width: 100px;
+    border: none;
+    outline: none;
     border-radius: 2px;
+    margin: 4px 2px;
     cursor: pointer;
     align-items: center;
     box-shadow: inset 0 1px 1px rgb(255, 255, 255, 0.07), 0 1px 3px rgb(0, 0, 0, 0.29);
@@ -85,6 +95,174 @@ a:hover {
 
 .btn:hover {
     background-color: #337ab7;
+    color: var(--white-color);
+}
+
+/* Label */
+.label {
+    display: inline;
+    padding: 2.4px 7.2px 3.6px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    background-color: #6c757d;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+.label.label-pill {
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 10px;
+}
+
+.label.label-primary {
+    background-color: #365979;
+}
+
+.label.label-success {
+    background-color: #028502;
+}
+
+.label.label-danger {
+    background-color: #ad2e2e;
+}
+
+.label.label-warning {
+    color: #212529;
+    background-color: #ff9800;
+}
+
+.label.label-info {
+    background-color: #17a2b8;
+}
+
+.label.label-light {
+    color: #212529;
+    background-color: #f8f9fa;
+}
+
+.label.label-dark {
+    background-color: #343a40;
+}
+
+.label.label-gradient-primary {
+    font: 12px Impact, HelveticaNeue-CondensedBold, sans-serif;
+    color: #d8d8d8;
+    text-shadow: 0 0 0.15em #545454;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: bottom;
+    border-radius: 0.15em;
+    background: radial-gradient(#212b36, #005d94);
+}
+
+.label.label-gradient-warning {
+    font: 12px Impact, HelveticaNeue-CondensedBold, sans-serif;
+    color: #000;
+    text-shadow: 0 0 0.15em #fff;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: bottom;
+    border-radius: 0.15em;
+    background: radial-gradient(#ffffb8, #ce981d);
+}
+
+/* Popup Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.modal.modal-xl .modal-dialog {
+    width: 1123px;
+}
+.modal.modal-lg .modal-dialog {
+    width: 800px;
+}
+.modal.modal-sm .modal-dialog {
+    width: 300px;
+}
+
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 123, 138, 0.4);
+}
+
+.modal-dialog {
+    position: relative;
+    color: var(--white-color);
+    margin: auto 12px;
+    width: 500px;
+    background-color: #1b2c3c;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    outline: 0;
+}
+
+.modal-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-bottom: 1px solid #4b5563;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: var(--white-color);
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.modal-close-btn:hover{
+    background-color: #337ab7;
+}
+
+.modal-body {
+    flex: 1 1 auto;
+    padding: 12px;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px 14px;
+    border-top: 1px solid #4b5563;
 }
 
 
@@ -651,4 +829,95 @@ a:hover {
 
 .xpo-yellow .xpo-slide-full__title:hover {
     color: #FFC146 !important;
+}
+
+/* Breadcrumb */
+.breadcrumb-wrap{
+    overflow-x: auto;
+}
+.breadcrumb {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+.breadcrumb li {
+    float: left;
+}
+
+.breadcrumb li .iconify {
+    font-size: 1.6rem;
+}
+
+
+.breadcrumb li a {
+    text-decoration: none;
+    position: relative;
+    background-color: #224361;
+    color: #ededed;
+    padding: 8px 12px 8px 0;
+    margin-right: 36px;
+    display: flex;
+    white-space: nowrap;
+}
+
+.breadcrumb li.active a {
+    background-color: #1d82e1;
+}
+.breadcrumb li.active a::before{
+    border-color: #1d82e1 #1d82e1 #1d82e1 transparent;
+}
+
+.breadcrumb li.active a::after{
+    border-color: transparent transparent transparent #1d82e1;
+}
+.breadcrumb li a:hover {
+    background-color: #1d82e1;
+}
+
+.breadcrumb li a:hover::before{
+    border-color: #1d82e1 #1d82e1 #1d82e1 transparent;
+}
+
+.breadcrumb li a:hover::after{
+    border-color: transparent transparent transparent #1d82e1;
+}
+
+.breadcrumb li:first-child a {
+    padding-left: 14px;
+    border-radius: 4px 0 0 4px;
+}
+
+.breadcrumb li:last-child a {
+    padding-right: 14px;
+    border-radius: 0 4px 4px 0;
+}
+
+.breadcrumb li:first-child a::before,
+.breadcrumb li:last-child a::after {
+    display: none;
+}
+
+
+.breadcrumb li a::before {
+    content: '';
+    border: 16px solid;
+    border-color: #224361 #224361 #224361 transparent;
+    position: absolute;
+    top: 0;
+    left: -32px;
+}
+
+.breadcrumb li a::after {
+    content: '';
+    border: 16px solid;
+    border-color: transparent transparent transparent #224361;
+    position: absolute;
+    top: 0;
+    right: -32px;
 }

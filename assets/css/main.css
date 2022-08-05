@@ -597,6 +597,7 @@
 /* Container */
 
 .container {
+    color: #a5a5a5;
     background: #151d25;
     padding: 0 0 15px;
     box-shadow: inset 0 1px 1px rgb(21 29 37), 0 1px 3px rgba(0, 0, 0, 0.86);
@@ -1152,6 +1153,7 @@
         opacity: 0;
         transform: scale3d(0.3, 0.3, 0.3)
     }
+
     50% {
         opacity: 1
     }
@@ -1250,4 +1252,370 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin: 2px 0;
+}
+
+/* xpo film info  */
+.xpo-film-info {
+    margin: 4px !important;
+}
+
+.xpo-film-info a {
+    text-decoration: none;
+}
+
+.xpo-film-info__poster {
+    position: relative;
+    text-align: center;
+}
+
+.poster__thumb {
+    display: inline-block;
+    position: relative;
+}
+
+.poster__thumb img {
+    width: 100%;
+    display: inline-block;
+    box-shadow: inset 0 1px 1px #151d25, 0 1px 3px rgba(0, 0, 0, 0.86);
+    max-height: 360px;
+    max-width: 300px;
+    border: 6px solid #1f2933;
+    border-radius: 4px;
+}
+
+.poster__bookmark,
+.poster__follow {
+    position: absolute;
+    top: 8px;
+    background-color: rgba(17, 24, 39, 0.8);
+    border: none;
+    border-radius: 2px;
+}
+
+.poster__bookmark {
+    right: 10px;
+    font-size: 3.2rem;
+    color: #b592f5;
+    padding: 2px;
+}
+
+.poster__follow {
+    right: 48px;
+    font-size: 2.8rem;
+    color: #59f0bc;
+    padding: 4px;
+}
+
+.poster__bookmark:hover .poster__bookmark-label,
+.poster__follow:hover .poster__follow-label {
+    display: block;
+}
+
+.poster__bookmark-label,
+.poster__follow-label {
+    display: block;
+    white-space: nowrap;
+    font-size: 1.4rem;
+    background-color: inherit;
+    position: absolute;
+    top: -30px;
+    border-radius: 6px;
+    padding: 6px 10px;
+    display: none;
+    animation: growupLabel 0.25s;
+    transition: all ease-in-out;
+}
+
+@keyframes growupLabel {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.poster__follow-label {
+    left: -26px;
+}
+
+.poster__bookmark-label {
+    left: -36px;
+}
+
+.btn-wrap {
+    text-align: center;
+    margin: 4px 0 12px;
+    margin-left: -4px;
+}
+
+.btn-wrap .btn {
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.btn-wrap .btn .iconify {
+    margin-right: 6px;
+}
+
+.info__film-title {
+    margin: 0 0 10px 10px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.info__film-title__name {
+    display: block;
+    font: 2.7rem 'UTMCafetaRegular';
+    color: #ffed4d;
+    text-transform: uppercase;
+    line-height: 35px;
+}
+
+.info__film-title__original-name,
+.info__film-title__year {
+    color: #d3d3d3;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.info__list-info-group {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #14212d;
+    padding: 12px 10px;
+    background: #00000026;
+    text-shadow: 1px 1px 4px #000000;
+    box-shadow: inset 0 1px 1px rgba(21, 29, 37, 0), 0 1px 10px rgba(0, 0, 0, 0.86);
+}
+
+.info__list-info-group__item {
+    display: block;
+    font-size: 1.2rem;
+    border-bottom: 1px dashed rgba(146, 146, 146, 0.125);
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.info__list-info-group__item:last-child {
+    border-bottom: unset;
+}
+
+.info__list-info-group__item .item-title {
+    display: inline-block;
+    color: var(--white-color);
+    font-weight: 700;
+    padding: 4px 12px;
+    background-color: #224361;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.info__list-info-group__item .item-title:hover {
+    background-color: #1d82e1;
+    /* background-color: #3577b1; */
+    cursor: pointer;
+}
+
+.info__list-info-group__item .item-title .iconify {
+    font-size: 1.2rem;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.rating {
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.rating-label {
+    margin-left: 4px;
+}
+
+#film-rating .jq-star {
+    transform: translateY(4px);
+}
+
+/* film's actors */
+.xpo-film-cast {
+    padding: 0 16px;
+}
+
+.xpo-list-cast {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* .xpo-list-cast__item {} */
+
+.actor-profile {
+    text-decoration: none;
+}
+
+.actor-avatar {
+    overflow: hidden;
+    border: 2px solid #ECC52A;
+    border-radius: 50%;
+    transition: all 0.25s ease-in-out;
+}
+
+.actor-avatar:hover {
+    border-radius: 6px;
+}
+
+.actor-name {
+    text-align: center;
+    margin-top: 4px;
+}
+
+.actor-name span {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/* film content */
+.xpo-film-content {
+    padding: 0 16px;
+}
+
+.xpo-film-content__box {
+    padding-left: 12px;
+    padding-right: 12px;
+    max-height: 6000px;
+    transition: all 0.25s ease;
+}
+
+.xpo-film-content__text {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    letter-spacing: 0.6px;
+    text-align: justify;
+}
+
+.xpo-film-content__images {
+    margin-top: 10px;
+}
+
+.xpo-film-content__images img {
+    border: 5px solid;
+}
+
+/* btn showmore/showless film content */
+
+.xpo-film-content__box.collapse {
+    overflow-y: hidden;
+    max-height: 142px;
+    transition: all 0.25s ease;
+}
+
+.xpo-film-content__btn-toggle {
+    text-align: center;
+    position: relative;
+    padding-top: 2px;
+    box-shadow: 0 -15px 10px 0 rgba(15, 20, 22, 0.85);
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.xpo-film-content__btn-toggle::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 46px;
+    width: 100%;
+    bottom: 26px;
+    background: linear-gradient(to bottom, rgba(16, 24, 33, .28) 0%, #101821 100%);
+}
+
+.xpo-film-content__btn-toggle .show-more {
+    font-size: 1.4rem;
+    padding: 4px 20px;
+    cursor: pointer;
+    color: #ddd;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+/* film tags */
+.xpo-film-tags {
+    padding: 0 16px;
+}
+
+.film-tags-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.film-tags-item {
+    display: inline-block;
+    color: var(--white-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding: 5px 10px 5px 14px;
+    margin: 2px 12px;
+    background-color: #224361;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    position: relative;
+}
+
+.film-tags-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -14px;
+    border-color: transparent #224361 transparent transparent;
+    border-style: solid;
+    border-width: 12.5px 14px 12.5px 0;
+}
+
+.film-tags-item::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 42%;
+    left: 0;
+}
+
+.film-tags-item:hover {
+    background-color: #1d82e1;
+    cursor: pointer;
+}
+
+.film-tags-item:hover::before {
+    border-color: transparent #1d82e1 transparent transparent;
+    cursor: pointer;
+}
+
+/* film comment */
+.xpo-film-comment {
+    padding: 0 16px;
+}
+
+/* film related */
+.xpo-film-related {
+    padding: 0 16px;
+}
+
+/* embed responsive*/
+.embed-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.embed-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
