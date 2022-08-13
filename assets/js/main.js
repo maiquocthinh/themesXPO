@@ -1,4 +1,5 @@
 // file này bần đạo viết như cứt mong các vị huynh đài đừng đánh giá :)))
+
 $('#xpo-hot').owlCarousel({
     loop: true,
     margin: 6,
@@ -282,13 +283,16 @@ xpoMiniInfo.onmouseover = function () {
         xpoMiniInfo.style.top = (20 + event.pageY) + 'px';
     };
 }
+xpoMiniInfo.onmouseleave = function () {
+    xpoMiniInfo.style.display = 'none';
+}
 xpoItems.forEach(function (xpoItem) {
     // get info of film
     const infoFilm = xpoItem.querySelector('.xpo-mini-info__data');
 
     // handle hiden/show when mouseover/mouseout
     xpoItem.onmouseover = function () {
-        fillDataToXpoMiniInfo(xpoMiniInfo, infoFilm)
+        fillDataToXpoMiniInfo(xpoMiniInfo, infoFilm);
         xpoMiniInfo.style.display = 'block';
         xpoItem.onmousemove = function (event) {
             xpoMiniInfo.style.left = (-50 + event.pageX) + 'px';
@@ -325,87 +329,94 @@ function scoreToText(score) {
             return "Hay tuyệt";
     }
 }
-function ratingFilm(initRating = 5) {
-    $('.rating-label').text(scoreToText(initRating * 2));
-    $("#film-rating").starRating({
-        initialRating: initRating / 2,
-        totalStars: 5,
-        starSize: 16,
-        strokeWidth: 6,
-        strokeColor: 'black',
-        emptyColor: 'lightgray',
-        hoverColor: 'crimson',
-        activeColor: 'crimson',
-        useGradient: false,
-        onHover: function (currentIndex, currentRating, $el) {
-            $('.rating-label').text(scoreToText(currentIndex * 2));
-        },
-        onLeave: function (currentIndex, currentRating, $el) {
-            $('.rating-label').text(scoreToText(currentRating * 2));
-        },
-        callback: function (currentRating, ratingElement) {
-            const ratingPoint = currentRating * 2;
-            // do somthing with ratingPoint....
-        },
-    });
-}
-ratingFilm();
+(function ratingFilm(initRating = 5) {
+    if (document.getElementById('film-rating')) {
+        $('.rating-label').text(scoreToText(initRating * 2));
+        $("#film-rating").starRating({
+            initialRating: initRating / 2,
+            totalStars: 5,
+            starSize: 18,
+            strokeWidth: 6,
+            strokeColor: 'black',
+            emptyColor: 'lightgray',
+            hoverColor: 'crimson',
+            activeColor: 'crimson',
+            useGradient: false,
+            onHover: function (currentIndex, currentRating, $el) {
+                $('.rating-label').text(scoreToText(currentIndex * 2));
+            },
+            onLeave: function (currentIndex, currentRating, $el) {
+                $('.rating-label').text(scoreToText(currentRating * 2));
+            },
+            callback: function (currentRating, ratingElement) {
+                const ratingPoint = currentRating * 2;
+                // do somthing with ratingPoint....
+            },
+        });
+    }
+})();
 
 // add film to boxfilm and follow film
 const btnFollowFilm = document.querySelector(".xpo-film-info button.poster__follow");
 const btnBookmarkFilm = document.querySelector(".xpo-film-info button.poster__bookmark");
 
-btnFollowFilm.onclick = function () {
-    const iconFollowFilm = btnFollowFilm.querySelector('.iconify');
-    const labelFollowFilm = btnFollowFilm.querySelector('.poster__follow-label');
-    if (iconFollowFilm.dataset.icon === iconFollowFilm.dataset.iconAdd) {
-        iconFollowFilm.dataset.icon = iconFollowFilm.dataset.iconRemove;
-        labelFollowFilm.textContent = labelFollowFilm.dataset.msgRemove;
-        btnFollowFilm.title = labelFollowFilm.dataset.msgRemove;
+if (btnFollowFilm) {
+    btnFollowFilm.onclick = function () {
+        const iconFollowFilm = btnFollowFilm.querySelector('.iconify');
+        const labelFollowFilm = btnFollowFilm.querySelector('.poster__follow-label');
+        if (iconFollowFilm.dataset.icon === iconFollowFilm.dataset.iconAdd) {
+            iconFollowFilm.dataset.icon = iconFollowFilm.dataset.iconRemove;
+            labelFollowFilm.textContent = labelFollowFilm.dataset.msgRemove;
+            btnFollowFilm.title = labelFollowFilm.dataset.msgRemove;
 
-        // make somthing when follow film....
-    } else if (iconFollowFilm.dataset.icon === iconFollowFilm.dataset.iconRemove) {
-        iconFollowFilm.dataset.icon = iconFollowFilm.dataset.iconAdd;
-        labelFollowFilm.textContent = labelFollowFilm.dataset.msgAdd;
-        btnFollowFilm.title = labelFollowFilm.dataset.msgAdd;
+            // make somthing when follow film....
+        } else if (iconFollowFilm.dataset.icon === iconFollowFilm.dataset.iconRemove) {
+            iconFollowFilm.dataset.icon = iconFollowFilm.dataset.iconAdd;
+            labelFollowFilm.textContent = labelFollowFilm.dataset.msgAdd;
+            btnFollowFilm.title = labelFollowFilm.dataset.msgAdd;
 
-        // make somthing when unfollow film....
+            // make somthing when unfollow film....
+        }
     }
 }
-btnBookmarkFilm.onclick = function () {
-    const iconBookmarkFilm = btnBookmarkFilm.querySelector('.iconify');
-    const labelBookmarkFilm = btnBookmarkFilm.querySelector('.poster__bookmark-label');
-    if (iconBookmarkFilm.dataset.icon === iconBookmarkFilm.dataset.iconAdd) {
-        iconBookmarkFilm.dataset.icon = iconBookmarkFilm.dataset.iconRemove;
-        labelBookmarkFilm.textContent = labelBookmarkFilm.dataset.msgRemove;
-        btnBookmarkFilm.title = labelBookmarkFilm.dataset.msgRemove;
+if (btnBookmarkFilm) {
+    btnBookmarkFilm.onclick = function () {
+        const iconBookmarkFilm = btnBookmarkFilm.querySelector('.iconify');
+        const labelBookmarkFilm = btnBookmarkFilm.querySelector('.poster__bookmark-label');
+        if (iconBookmarkFilm.dataset.icon === iconBookmarkFilm.dataset.iconAdd) {
+            iconBookmarkFilm.dataset.icon = iconBookmarkFilm.dataset.iconRemove;
+            labelBookmarkFilm.textContent = labelBookmarkFilm.dataset.msgRemove;
+            btnBookmarkFilm.title = labelBookmarkFilm.dataset.msgRemove;
 
-        // make somthing when add film to bookmark....
-    } else if (iconBookmarkFilm.dataset.icon === iconBookmarkFilm.dataset.iconRemove) {
-        iconBookmarkFilm.dataset.icon = iconBookmarkFilm.dataset.iconAdd;
-        labelBookmarkFilm.textContent = labelBookmarkFilm.dataset.msgAdd;
-        btnBookmarkFilm.title = labelBookmarkFilm.dataset.msgAdd;
+            // make somthing when add film to bookmark....
+        } else if (iconBookmarkFilm.dataset.icon === iconBookmarkFilm.dataset.iconRemove) {
+            iconBookmarkFilm.dataset.icon = iconBookmarkFilm.dataset.iconAdd;
+            labelBookmarkFilm.textContent = labelBookmarkFilm.dataset.msgAdd;
+            btnBookmarkFilm.title = labelBookmarkFilm.dataset.msgAdd;
 
-        // make somthing when remove film form bookmark....
+            // make somthing when remove film form bookmark....
+        }
     }
 }
 
-// showmore/shiwless film content
+// showmore/showless film content
 const contentBox = document.querySelector('.xpo-film-content__box');
 const toggleBtnContent = document.querySelector('.xpo-film-content__btn-toggle button');
 
-toggleBtnContent.onclick = function () {
-    contentBox.classList.toggle('collapse');
-    if (contentBox.classList.contains('collapse')) {
-        toggleBtnContent.textContent = toggleBtnContent.dataset.showmore;
-    } else {
-        toggleBtnContent.textContent = toggleBtnContent.dataset.showless;
+if (toggleBtnContent) {
+    toggleBtnContent.onclick = function () {
+        contentBox.classList.toggle('collapse');
+        if (contentBox.classList.contains('collapse')) {
+            toggleBtnContent.textContent = toggleBtnContent.dataset.showmore;
+        } else {
+            toggleBtnContent.textContent = toggleBtnContent.dataset.showless;
 
+        }
     }
 }
 
 // Trailer modal popup show
-function showTrailer(){
+function showTrailer() {
     document.querySelector('#trailer-popup').classList.remove('hidden');
 }
 

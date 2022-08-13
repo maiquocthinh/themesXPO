@@ -228,6 +228,13 @@ a:hover {
     font-size: 1.8rem;
     line-height: 1.5;
     margin: 0;
+    text-align: start;
+    width: 92%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
 }
 
 .modal-close-btn {

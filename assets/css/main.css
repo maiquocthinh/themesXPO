@@ -1140,33 +1140,34 @@
     position: absolute;
     background-color: #ffffff;
     max-width: 320px;
-    border-radius: 4px;
-    padding: 12px;
+    border-radius: 6px;
+    padding: 0;
     z-index: 3;
-    animation-name: zoomIn;
-    animation-duration: 0.3s;
-    animation-fill-mode: both;
-}
-
-@keyframes zoomIn {
-    from {
-        opacity: 0;
-        transform: scale3d(0.3, 0.3, 0.3)
-    }
-
-    50% {
-        opacity: 1
-    }
+    box-shadow: 1px 1px 4px 1px #101a2370;
 }
 
 .xpo-mini-info::before {
     content: '';
     display: block;
     border: 8px solid;
-    border-color: transparent transparent #fff transparent;
+    border-color: transparent transparent #e3e3e3 transparent;
     position: absolute;
     top: -15px;
     left: 45px;
+}
+
+.xpo-mini-info__heading{
+    padding: 12px;
+    background-color: #e3e3e3;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: 1px solid #e0d0d0;
+
+}
+
+.xpo-mini-info__body{
+    padding: 12px;
+
 }
 
 .xpo-mini-info__name {
@@ -1222,7 +1223,7 @@
 
 .xpo-mini-info__short-description {
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
