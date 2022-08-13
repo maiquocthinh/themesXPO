@@ -430,3 +430,21 @@ modals.forEach((modal) => {
         modal.querySelector('iframe').src = modal.querySelector('iframe').src;
     }
 });
+
+// show/hidden film filter on mobile
+const formFilter = document.querySelector('#form-filter');
+const btnToggleFilter = document.querySelector('.btn-toggle-filter');
+if (btnToggleFilter) {
+    btnToggleFilter.onclick = function () {
+        if(btnToggleFilter.dataset.show === 'false'){
+            btnToggleFilter.dataset.show = 'true';
+            btnToggleFilter.innerHTML = 'Ẩn lọc phim &#10606;';
+            formFilter.classList.remove('sm-hidden');
+        }else{
+            btnToggleFilter.dataset.show = 'false';
+            btnToggleFilter.innerHTML = 'Chức năng lọc phim &#10606;';
+            formFilter.classList.add('sm-hidden');
+        }
+    }
+
+}

@@ -73,6 +73,7 @@ a:hover {
     margin: 5px 0;
     background: #0e141b99;
 }
+
 /* Button */
 
 .btn {
@@ -185,9 +186,11 @@ a:hover {
 .modal.modal-xl .modal-dialog {
     width: 1123px;
 }
+
 .modal.modal-lg .modal-dialog {
     width: 800px;
 }
+
 .modal.modal-sm .modal-dialog {
     width: 300px;
 }
@@ -253,7 +256,8 @@ a:hover {
     border: none;
     outline: none;
 }
-.modal-close-btn:hover{
+
+.modal-close-btn:hover {
     background-color: #337ab7;
 }
 
@@ -534,6 +538,7 @@ a:hover {
 
 .section-bar__title {
     --height: 40px;
+    max-width: 92%;
     display: inline-block;
     color: #d8dbdf;
     text-transform: uppercase;
@@ -545,6 +550,14 @@ a:hover {
     line-height: var(--height);
     background-color: rgb(34, 67, 97);
     position: relative;
+}
+
+.section-bar__title span {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
 }
 
 .section-bar__title::before {
@@ -839,9 +852,10 @@ a:hover {
 }
 
 /* Breadcrumb */
-.breadcrumb-wrap{
+.breadcrumb-wrap {
     overflow-x: auto;
 }
+
 .breadcrumb {
     padding-left: 0;
     list-style: none;
@@ -876,22 +890,24 @@ a:hover {
 .breadcrumb li.active a {
     background-color: #1d82e1;
 }
-.breadcrumb li.active a::before{
+
+.breadcrumb li.active a::before {
     border-color: #1d82e1 #1d82e1 #1d82e1 transparent;
 }
 
-.breadcrumb li.active a::after{
+.breadcrumb li.active a::after {
     border-color: transparent transparent transparent #1d82e1;
 }
+
 .breadcrumb li a:hover {
     background-color: #1d82e1;
 }
 
-.breadcrumb li a:hover::before{
+.breadcrumb li a:hover::before {
     border-color: #1d82e1 #1d82e1 #1d82e1 transparent;
 }
 
-.breadcrumb li a:hover::after{
+.breadcrumb li a:hover::after {
     border-color: transparent transparent transparent #1d82e1;
 }
 
@@ -927,4 +943,78 @@ a:hover {
     position: absolute;
     top: 0;
     right: -32px;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.pagination button.active {
+    background-image: linear-gradient(to bottom left, #cd881e, #674614);
+}
+
+.pagination button {
+    color: var(--white-color);
+    min-width: 40px;
+    border-radius: 3px;
+    margin: 1px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+/* Films Filter Form */
+.list-films-filter {
+    margin: 0 12px;
+    width: 100%;
+}
+
+.btn-toggle-filter{
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 12px;
+}
+
+#form-filter {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+}
+
+.list-films-filter__item {
+    display: flex;
+    flex-direction: column;
+    margin: 4px 8px;
+}
+
+.list-films-filter__item label {
+    color: #ddd;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+.list-films-filter__item label .iconify{
+    transform: translateY(2px);
+}
+
+.list-films-filter__item select {
+    font-size: 1.4rem;
+    padding: 8px 12px;
+    background-color: #1c2d3e;
+    border: 1px solid #224361;
+    color: white;
+    border-radius: 3px;
+}
+
+.btn-filter{
+    margin: 4px 8px;
+    padding: 19px;
+    border-radius: 3px;
 }

@@ -49,6 +49,9 @@
         top: calc(100% - 9px);
         width: 100%;
     }
+    .section-bar__title{
+        max-width: 86%;
+    }
 }
 
 
@@ -56,6 +59,16 @@
 
 @media (min-width: 740px) and (max-width: 1023px) {
     .md-hidden {
+        display: none !important;
+    }
+    .section-bar__title{
+        max-width: 90%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1023px){
+    .lg-hidden {
         display: none !important;
     }
 }
