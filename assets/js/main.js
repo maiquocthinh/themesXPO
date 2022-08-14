@@ -427,7 +427,9 @@ modals.forEach((modal) => {
     btnCloseModal.onclick = function () {
         modal.classList.add('hidden');
         // stop video iframe if this is playing
-        modal.querySelector('iframe').src = modal.querySelector('iframe').src;
+        if(modal.querySelector('iframe')){
+            modal.querySelector('iframe').src = modal.querySelector('iframe').src;
+        }
     }
 });
 
@@ -436,15 +438,96 @@ const formFilter = document.querySelector('#form-filter');
 const btnToggleFilter = document.querySelector('.btn-toggle-filter');
 if (btnToggleFilter) {
     btnToggleFilter.onclick = function () {
-        if(btnToggleFilter.dataset.show === 'false'){
+        if (btnToggleFilter.dataset.show === 'false') {
             btnToggleFilter.dataset.show = 'true';
             btnToggleFilter.innerHTML = 'Ẩn lọc phim &#10606;';
             formFilter.classList.remove('sm-hidden');
-        }else{
+        } else {
             btnToggleFilter.dataset.show = 'false';
             btnToggleFilter.innerHTML = 'Chức năng lọc phim &#10606;';
             formFilter.classList.add('sm-hidden');
         }
     }
 
+}
+
+// Nav tabs 
+const navTabsComponents = document.querySelectorAll('.nav-tabs-component');
+navTabsComponents.forEach((navTabsComponent) => {
+    const tabsContent = navTabsComponent.querySelector('.tabs-content');
+    const tabs = navTabsComponent.querySelectorAll('.nav-tabs .nav-tabs__item');
+    tabs.forEach((tab) => {
+        tab.onclick = function (event) {
+            navTabsComponent.querySelector('.nav-tabs .nav-tabs__item.active').classList.remove('active');
+            event.target.closest('.nav-tabs__item').classList.add('active');
+            const selectTab = event.target.closest('.nav-tabs__item span').dataset.tabSelect;
+            tabsContent.querySelector('.tabs-content__item.active').classList.remove('active');
+            tabsContent.querySelector(`.tabs-content__item[data-tab-target="${selectTab}"]`).classList.add('active');
+        }
+    });
+});
+
+// expand/compress player
+const btnExpandPlayer = document.querySelector('#expand-player');
+const xpoPlayerBox = document.querySelector('.xpo-film-media__player');
+const asideBox = document.querySelector('aside.sidebar');
+btnExpandPlayer.onclick = function () {
+    if (btnExpandPlayer.dataset.status === 'expanded') {
+        // change content, icon, status of btnExpandPlayer
+        btnExpandPlayer.innerHTML = `<i class="iconify" data-icon="fa:compress" style="font-size:1rem;transform:translateY(0);"></i>Thu nhỏ`;
+        btnExpandPlayer.dataset.status = 'compressed';
+
+        const widthFull = document.querySelector('.container>div').offsetWidth - 32;
+
+        // change width, height of element related with xpoPlayerBox
+        xpoPlayerBox.style.width = widthFull + 'px';
+        xpoPlayerBox.style.maxHeight = xpoPlayerBox.offsetHeight + 'px';
+        asideBox.style.marginTop = xpoPlayerBox.offsetHeight - 18 + 'px';
+
+        // scroll top of xpoPlayerBox
+        xpoPlayerBox.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    } else {
+        // change content, icon, status of btnExpandPlayer
+        btnExpandPlayer.innerHTML = `<i class="iconify" data-icon="fa:expand" style="font-size:1rem;transform:translateY(0);"></i>Mở rộng`;
+        btnExpandPlayer.dataset.status = 'expanded';
+
+        // change width, height of element related with xpoPlayerBox
+        xpoPlayerBox.style.width = 'unset';
+        xpoPlayerBox.style.maxHeight = 'unset';
+        asideBox.style.marginTop = '-24px';
+
+        // scroll top of xpoPlayerBox
+        xpoPlayerBox.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }
+}
+
+// turn off/on light on watch page
+const lightOut = document.querySelector('#lightout');
+const btnToggleLight = document.querySelector('#toggle-light');
+const boxMediaUserAction =document.querySelector('.xpo-film-media__user-action');
+function toggleLight() {
+    const isLightOn = lightOut.classList.contains('hidden');
+    btnToggleLight.innerHTML = '<i class="iconify" data-icon="fa:adjust"></i> '
+        + (isLightOn ? 'Bật đèn' : 'Tắt đèn');
+        
+        // add/remove lightup class
+        if(isLightOn){
+            xpoPlayerBox.classList.add('lightup');
+            boxMediaUserAction.classList.add('lightup');
+        }else{
+            xpoPlayerBox.classList.remove('lightup');
+            boxMediaUserAction.classList.remove('lightup');
+        }
+        
+        // scroll top of xpoPlayerBox
+        xpoPlayerBox.scrollIntoView({ block: 'start', behavior: 'smooth' });
+
+        lightOut.classList.toggle('hidden');
+}
+lightOut.onclick = () => toggleLight();
+btnToggleLight.onclick = () => toggleLight();
+
+// Share social modal popup show
+function showShareSocial() {
+    document.querySelector('#share-popup').classList.remove('hidden');
 }

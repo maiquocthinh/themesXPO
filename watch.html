@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thông tin</title>
+  <title>Xem phim</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Charis+SIL&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -255,212 +255,133 @@
         <div class="breadcrumb-wrap col col-lg-12 col-md-12 col-sm-12">
           <ul class="breadcrumb">
             <li><a href="#"><i class="iconify" data-icon="dashicons:admin-home"></i>Trang Chủ</a></li>
-            <li><a href="#">Phim Lẻ</a></li>
-            <li class="active"><a href="#">Minions: Sự Trỗi Dậy của Gru</a></li>
+            <li><a href="#">Phim lẻ</a></li>
+            <li class="active"><a href="#">Minions cắt cỏ</a></li>
           </ul>
         </div>
         <main class="main-content col col-lg-9 col-md-9 col-sm-12">
-          <section class="xpo-film-info row lg-gutter">
-            <div class="xpo-film-info__poster col col-lg-4 col-md-4 col-sm-12">
-              <div class="poster__thumb">
-                <img src="https://www.themoviedb.org/t/p/original/9RgrJSxt638Gc6KgQPHYBsK64lT.jpg" alt="Minions: Sự Trỗi Dậy của Gru (2022)">
-                <button title="Theo dõi phim" class="poster__follow">
-                  <i class="iconify" data-icon="mdi:movie-open-plus" data-icon-add="mdi:movie-open-plus" data-icon-remove="mdi:movie-open-remove"></i></i>
-                  <span class="poster__follow-label" data-msg-add="Theo dõi phim" data-msg-remove="Bỏ theo dõi phim">Theo dõi phim</span>
-                </button>
-                <button title="Thêm vào tủ phim" class="poster__bookmark">
-                  <i class="iconify" data-icon="ic:baseline-bookmark-add" data-icon-add="ic:baseline-bookmark-add" data-icon-remove="fe:trash"></i>
-                  <span class="poster__bookmark-label" data-msg-add="Thêm vào tủ phim" data-msg-remove="Xóa khỏi tủ phim">Thêm vào tủ phim</span>
-                </button>
+          <section class="xpo-film-media">
+            <div class="xpo-film-media__player">
+              <div class="htmlnote" style="text-align:center;">Dùng <span>Chrome</span> để xem phim tốt hơn - Nếu không xem được thì chọn <span>server</span> khác hoặc là đợi một tý rồi load lại là OK ngay!</div>
+              <div class="xpo-film-media__player-container">
+                <div class="xpo-player-loader hidden"></div>
+                <div class="xpo-player-area">
+                  <div class="embed-container">
+                    <iframe class="embed-item" src="https://kd.hd-bophim.com/share/348a38cd25abeab0e440f37510e9b1fa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                  </div>
+                </div>
               </div>
-              <div class="btn-wrap">
-                <a class="btn" onclick="showTrailer();"><i class="iconify" data-icon="bi:camera-reels-fill"></i>Trailer</a>
-                <a class="btn" href="./watch.html"><i class="iconify" data-icon="fa6-solid:play"></i>Watch</a>
+            </div>
+            <div class="xpo-film-media__user-action htmlwrap row">
+              <div class="xpo-social-plugin col col-lg-4 col-md-4 col-sm-0">
+                <span class="rating">
+                  <span id="film-rating"></span><span class="label label-info rating-label"></span>
+                </span>
               </div>
-              <!-- Trailer Modal Popup -->
-              <div id="trailer-popup" class="modal modal-lg hidden">
-                <div class="modal-overlay"></div>
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Trailer "Minions: Sự Trỗi Dậy của Gru"</h5>
-                      <button class="modal-close-btn">
-                        <span>&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="embed-container">
-                        <iframe class="embed-item" src="https://www.youtube.com/embed/SC7BfxpWieM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="xpo-btns-media-action col col-lg-8 col-md-8 col-sm-12">
+                <button class="btn btn-media-action"><i class="iconify" data-icon="uiw:d-arrow-left"></i> Tập trước</button>
+                <button class="btn btn-media-action">Tập tiếp theo <i class="iconify" data-icon="uiw:d-arrow-right"></i></button>
+                <button class="btn btn-media-action sm-hidden" id="expand-player" data-status="expanded"><i class="iconify" data-icon="fa:expand" style="font-size:1rem;transform:translateY(0);"></i>Mở rộng</button>
+                <button class="btn btn-media-action" id="toggle-light"><i class="iconify" data-icon="fa:adjust"></i> Tắt đèn</button>
+                <button class="btn btn-media-action"><i class="iconify" data-icon="akar-icons:triangle-alert-fill"></i> Báo lỗi</button>
+                <button class="btn btn-media-action"><i class="iconify" data-icon="fa-solid:eye"></i> 23 Lượt xem</button>
+                <button class="btn btn-media-action" onclick="showShareSocial()"><i class="iconify" data-icon="fa6-solid:share"></i> Chia sẻ</button>
+                <!-- Share social Modal Popup -->
+                <div id="share-popup" class="modal modal-md hidden">
+                  <div class="modal-overlay"></div>
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Share</h5>
+                        <button class="modal-close-btn">
+                          <span>&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p class="share-title">Share this link via:</p>
+                        <div class="icons">
+                          <a href="#" class="icons__item">
+                            <i class="iconify" data-icon="fa6-brands:facebook-f"></i>
+                          </a>
+                          <a href="#" class="icons__item">
+                            <i class="iconify" data-icon="fa6-brands:twitter"></i>
+                          </a>
+                          <a href="#" class="icons__item">
+                            <i class="iconify" data-icon="fa6-brands:instagram"></i>
+                          </a>
+                          <a href="#" class="icons__item">
+                            <i class="iconify" data-icon="fa6-brands:whatsapp"></i>
+                          </a>
+                          <a href="#" class="icons__item">
+                            <i class="iconify" data-icon="fa-brands:telegram-plane"></i>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="xpo-film-info__info col col-lg-8 col-md-8 col-sm-12">
-              <div class="info__film-title">
-                <span class="info__film-title__name">Minions: Sự Trỗi Dậy của Gru</span>
-                <span class="info__film-title__original-name">Minions: The Rise Of Gru</span>
-                <span class="info__film-title__year"> (2022) </span>
+            <div class="xpo-film-media__servers-episodes">
+              <div class="xpo-film-servers htmlwrap">
+                <ul class="list-server">
+                  <p><i class="iconify" data-icon="fa-solid:server"></i> Server: </p>
+                  <li class="list-server__item active"><button class="btn">Server#1</button></li>
+                  <li class="list-server__item"><button class="btn">Server#2</button></li>
+                  <li class="list-server__item"><button class="btn">Server#3</button></li>
+                </ul>
               </div>
-              <ul class="info__list-info-group">
-                <li class="info__list-info-group__item">
-                  <span class="item-title"><i class="iconify" data-icon="fluent:status-24-filled"></i>Trạng thái</span> : <span class="label label-danger">HD</span>
-                </li>
-                <li class="info__list-info-group__item">
-                  <span class="item-title"><i class="iconify" data-icon="bxs:user"></i>Đạo diễn</span> : <a href="#" title="Brad Ableson">Brad Ableson</a>, <a href="#" title="Jonathan del Val">Jonathan del Val</a>, <a href="#" title="Kyle Balda">Kyle Balda</a>,
-                </li>
-                <li class="info__list-info-group__item">
-                  <span class="item-title"><i class="iconify" data-icon="ri:global-line"></i>Quốc gia</span> : <a href="#" title="Mỹ">Mỹ</a>,
-                </li>
-                <li class="info__list-info-group__item">
-                  <span class="item-title"><i class="iconify" data-icon="fluent:archive-24-filled"></i>Thể loại</span> : <a href="#" title="Hài Hước">Hài Hước</a>, <a href="#" title="Phiêu Lưu">Phiêu Lưu</a>, <a href="#" title="Hoạt Hình">Hoạt Hình</a>,
-                </li>
-                <li class="info__list-info-group__item">
-                  <span class="item-title"><i class="iconify" data-icon="bxl:imdb"></i>IMDb</span> : <span class="label label-gradient-warning">8.4</span>
-                </li>
-                <li class="info__list-info-group__item">
-                  <span class="item-title"><i class="iconify" data-icon="bi:translate"></i>Ngôn ngữ</span> : <span class="label label-info">Vietsub</span>
-                </li>
-                <li class="info__list-info-group__item">
-                  <span class="item-title"><i class="iconify" data-icon="fluent:clock-12-regular"></i>Thời lượng</span> : 87 phút
-                </li>
-                <li class="info__list-info-group__item">
-                  <span class="item-title"><i class="iconify" data-icon="uil:calender"></i>Năm phát hành</span> : <span class="label label-gradient-primary">2022</span>
-                </li>
-                <li class="info__list-info-group__item">
-                  <span class="item-title"><i class="iconify" data-icon="fa-solid:eye"></i>Lượt xem</span> : 23
-                </li>
-                <li class="info__list-info-group__item">
-                  <span class="item-title"><i class="iconify" data-icon="fluent:vote-24-filled"></i>Đánh giá</span> : <span class="label label-gradient-warning">9</span> (1 lượt)
-                  <span class="rating">
-                    <span id="film-rating"></span><span class="label label-info rating-label"></span>
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section class="xpo-film-cast xpo-yellow">
-            <div class="section-bar">
-              <h2 class="section-bar__title"><span>
-                  <i class="iconify section-bar__icon" data-icon="fa-solid:user-friends"></i></i> Diễn viên</span><i class="skew-left"></i>
-              </h2>
-            </div>
-            <ul class="xpo-list-cast htmlwrap owl-carousel owl-theme">
-              <li class="xpo-list-cast__item">
-                <a href="#" title="Name Actor" class="actor-profile">
-                  <div class="actor-avatar">
-                    <img src="https://i.imgur.com/7uQkORu.png" alt="Name Actor">
+              <div class="xpo-film-episodes htmlwrap">
+                <div class="nav-tabs-component">
+                  <ul class="nav-tabs">
+                    <li class="nav-tabs__item active"><span data-tab-select="#tab1"><i class="iconify" data-icon="fluent:server-play-20-filled"></i> Vietsub#1</span></li>
+                    <li class="nav-tabs__item"><span data-tab-select="#tab2"><i class="iconify" data-icon="fluent:server-play-20-filled"></i> Thuyết Minh#1</span></li>
+                    <li class="nav-tabs__item"><span data-tab-select="#tab3"><i class="iconify" data-icon="fluent:server-play-20-filled"></i> Vietsub#2</span></li>
+                    <li class="nav-tabs__item"><span data-tab-select="#tab4"><i class="iconify" data-icon="fluent:server-play-20-filled"></i> Thuyết Minh#2</span></li>
+                  </ul>
+                  <div class="tabs-content">
+                    <div class="tabs-content__item active" data-tab-target="#tab1">
+                      <ul class="xpo-list-episodes">
+                        <li class="xpo-list-episodes__episode-item active"><a class="btn" href="#"><span>1</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>2</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>3</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>4</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>5</span></a></li>
+                      </ul>
+                    </div>
+                    <div class="tabs-content__item" data-tab-target="#tab2">
+                      <ul class="xpo-list-episodes">
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>Full 1</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>Full 2</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>Full 3</span></a></li>
+                      </ul>
+                    </div>
+                    <div class="tabs-content__item" data-tab-target="#tab3">
+                      <ul class="xpo-list-episodes">
+                        <li class="xpo-list-episodes__episode-item active"><a class="btn" href="#"><span>1</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>2</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>3</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>4</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>5</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>6</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>7</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>8</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>9</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>10</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>11</span></a></li>
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>12-End</span></a></li>
+                      </ul>
+                    </div>
+                    <div class="tabs-content__item" data-tab-target="#tab4">
+                      <ul class="xpo-list-episodes">
+                        <li class="xpo-list-episodes__episode-item"><a class="btn" href="#"><span>Full HD</span></a></li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="actor-name">
-                    <span>Name Actor</span>
-                  </div>
-                </a>
-              </li>
-              <li class="xpo-list-cast__item">
-                <a href="#" title="Name Actor" class="actor-profile">
-                  <div class="actor-avatar">
-                    <img src="https://i.imgur.com/7uQkORu.png" alt="Name Actor">
-                  </div>
-                  <div class="actor-name">
-                    <span>Name Actor</span>
-                  </div>
-                </a>
-              </li>
-              <li class="xpo-list-cast__item">
-                <a href="#" title="Name Actor" class="actor-profile">
-                  <div class="actor-avatar">
-                    <img src="https://i.imgur.com/7uQkORu.png" alt="Name Actor">
-                  </div>
-                  <div class="actor-name">
-                    <span>Name Actor</span>
-                  </div>
-                </a>
-              </li>
-              <li class="xpo-list-cast__item">
-                <a href="#" title="Name Actor" class="actor-profile">
-                  <div class="actor-avatar">
-                    <img src="https://i.imgur.com/7uQkORu.png" alt="Name Actor">
-                  </div>
-                  <div class="actor-name">
-                    <span>Name Actor</span>
-                  </div>
-                </a>
-              </li>
-              <li class="xpo-list-cast__item">
-                <a href="#" title="Name Actor" class="actor-profile">
-                  <div class="actor-avatar">
-                    <img src="https://i.imgur.com/7uQkORu.png" alt="Name Actor">
-                  </div>
-                  <div class="actor-name">
-                    <span>Name Actor</span>
-                  </div>
-                </a>
-              </li>
-              <li class="xpo-list-cast__item">
-                <a href="#" title="Name Actor" class="actor-profile">
-                  <div class="actor-avatar">
-                    <img src="https://i.imgur.com/7uQkORu.png" alt="Name Actor">
-                  </div>
-                  <div class="actor-name">
-                    <span>Name Actor</span>
-                  </div>
-                </a>
-              </li>
-              <li class="xpo-list-cast__item">
-                <a href="#" title="Name Actor" class="actor-profile">
-                  <div class="actor-avatar">
-                    <img src="https://i.imgur.com/7uQkORu.png" alt="Name Actor">
-                  </div>
-                  <div class="actor-name">
-                    <span>Name Actor</span>
-                  </div>
-                </a>
-              </li>
-              <li class="xpo-list-cast__item">
-                <a href="#" title="Name Actor" class="actor-profile">
-                  <div class="actor-avatar">
-                    <img src="https://i.imgur.com/7uQkORu.png" alt="Name Actor">
-                  </div>
-                  <div class="actor-name">
-                    <span>Name Actor</span>
-                  </div>
-                </a>
-              </li>
-              <li class="xpo-list-cast__item">
-                <a href="#" title="Name Actor" class="actor-profile">
-                  <div class="actor-avatar">
-                    <img src="https://i.imgur.com/7uQkORu.png" alt="Name Actor">
-                  </div>
-                  <div class="actor-name">
-                    <span>Name Actor</span>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </section>
-          <section class="xpo-film-content xpo-green">
-            <div class="section-bar">
-              <h2 class="section-bar__title"><span>
-                  <i class="iconify section-bar__icon" data-icon="eos-icons:content-modified"></i></i> Nội Dung Phim</span><i class="skew-left"></i>
-              </h2>
-            </div>
-            <div class="htmlwrap">
-              <div class="xpo-film-content__box collapse">
-                <div class="xpo-film-content__text">
-                  <p><b>Minions: Sự Trỗi Dậy Của Gru</b> là câu chuyện rất lâu trước khi trở thành một phản diện chuyên nghiệp, Gru chỉ là một cậu bé 12 tuổi sống ở vùng ngoại ô vào những năm 1970, với ước mơ một ngày sẽ làm “bá chủ” thế giới. Và 3 “quả chuối” vàng biết đi từ trên trời rơi xuống đã là những đồng đội đầu tiên của Gru, bên cạnh ủng hộ cậu bé, cùng nhau thiết kế những vũ khí đầu tiên, thực hiện những phi vụ đầu tiên.</p>
-                </div>
-                <div class="xpo-film-content__images owl-carousel owl-theme">
-                  <img src="https://www.themoviedb.org/t/p/original/qTkJ6kbTeSjqfHCFCmWnfWZJOtm.jpg" alt="">
-                  <img src="https://www.themoviedb.org/t/p/original/xTlS9bIu8ER5QlW1d1ytiwA8TWF.jpg" alt="">
-                  <img src="https://www.themoviedb.org/t/p/original/2gGVdr0BcKzma68SW2jpZfJtOlB.jpg" alt="">
                 </div>
               </div>
-              <div class="xpo-film-content__btn-toggle">
-                <button class="show-more" data-showmore="Mở rộng..." data-showless="Thu gọn...">Mở rộng...</button>
-              </div>
             </div>
-
+            <div id="lightout" class="hidden"></div>
           </section>
           <section class="xpo-film-tags xpo-violet">
             <div class="section-bar">
@@ -636,7 +557,7 @@
             </div>
           </section>
         </main>
-        <aside class="sidebar col col-lg-3 col-md-3 col-sm-12">
+        <aside class="sidebar col col-lg-3 col-md-3 col-sm-12" style="margin-top:-24px;">
           <div class="sidebar-widget xpo-violet sm-hidden">
             <div class="sidebar-widget__section-bar section-bar">
               <h2 class="section-bar__title">

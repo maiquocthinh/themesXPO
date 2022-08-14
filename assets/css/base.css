@@ -74,6 +74,21 @@ a:hover {
     background: #0e141b99;
 }
 
+/* html note */
+.htmlnote {
+    font-size: 1.3rem;
+    padding: 5px;
+    background: #22466b;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px #000000;
+}
+
+.htmlnote a,
+.htmlnote span {
+    color: #2ecc71;
+    text-decoration: none;
+}
+
 /* Button */
 
 .btn {
@@ -190,6 +205,11 @@ a:hover {
 .modal.modal-lg .modal-dialog {
     width: 800px;
 }
+
+.modal.modal-md .modal-dialog {
+    width: 600px;
+}
+
 
 .modal.modal-sm .modal-dialog {
     width: 300px;
@@ -973,7 +993,7 @@ a:hover {
     width: 100%;
 }
 
-.btn-toggle-filter{
+.btn-toggle-filter {
     width: 100%;
     text-align: center;
     font-size: 1.4rem;
@@ -1000,7 +1020,8 @@ a:hover {
     margin-bottom: 6px;
     white-space: nowrap;
 }
-.list-films-filter__item label .iconify{
+
+.list-films-filter__item label .iconify {
     transform: translateY(2px);
 }
 
@@ -1013,8 +1034,64 @@ a:hover {
     border-radius: 3px;
 }
 
-.btn-filter{
+.btn-filter {
     margin: 4px 8px;
     padding: 19px;
     border-radius: 3px;
+}
+
+/* Nav tabs Component */
+.nav-tabs-component {
+    display: block;
+}
+
+.nav-tabs{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    white-space: nowrap;
+    border-bottom: 1px solid #263a4c;
+    overflow-x: auto;
+}
+
+.nav-tabs__item {
+    display: inline-block;
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    user-select: none;
+}
+.nav-tabs__item:hover span{
+    cursor: pointer;
+    background-color: #365979;
+}
+
+.nav-tabs__item span {
+    display: inline-block;
+    margin: 0;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--white-color);
+    text-align: center;
+    vertical-align: middle;
+    background-color: #101a23;
+}
+
+.nav-tabs__item.active span{
+    /* background-color: #263a4c; */
+    background-color: #229853;
+}
+
+.tabs-content {
+    padding: 12px 0;
+}
+.tabs-content__item{
+    display: none;
+}
+.tabs-content__item.active {
+    display: block;
 }
