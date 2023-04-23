@@ -1045,7 +1045,7 @@ a:hover {
     display: block;
 }
 
-.nav-tabs{
+.nav-tabs {
     margin: 0;
     padding-left: 0;
     list-style: none;
@@ -1062,7 +1062,8 @@ a:hover {
     overflow: hidden;
     user-select: none;
 }
-.nav-tabs__item:hover span{
+
+.nav-tabs__item:hover span {
     cursor: pointer;
     background-color: #365979;
 }
@@ -1081,7 +1082,7 @@ a:hover {
     background-color: #101a23;
 }
 
-.nav-tabs__item.active span{
+.nav-tabs__item.active span {
     /* background-color: #263a4c; */
     background-color: #229853;
 }
@@ -1089,9 +1090,11 @@ a:hover {
 .tabs-content {
     padding: 12px 0;
 }
-.tabs-content__item{
+
+.tabs-content__item {
     display: none;
 }
+
 .tabs-content__item.active {
     display: block;
 }

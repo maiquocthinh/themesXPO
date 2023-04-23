@@ -179,6 +179,7 @@
 .header-user {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 .header-user__wrap-btns {
@@ -195,10 +196,6 @@
 .header-user__btn {
     font-size: 1.4rem;
     color: var(--white-color);
-}
-
-.header-user__btn:not(:first-child) {
-    margin-left: 6px;
 }
 
 .header-user__icon {
@@ -340,6 +337,13 @@
 }
 
 
+/* wrap header action */
+.wrap-header-action {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
 /* logged in/registered */
 
 .header-user__btn-notify {
@@ -355,7 +359,7 @@
 
 .notify-box {
     position: absolute;
-    top: 100%;
+    top: 120%;
     right: 0;
     background-color: #12171b;
     width: 350px;
@@ -370,7 +374,7 @@
 .notify-box-arrow-up {
     content: "";
     position: absolute;
-    top: 17px;
+    top: 24px;
     right: 6px;
     border: 8px solid;
     border-color: transparent transparent #12171b transparent;
@@ -414,6 +418,8 @@
 .header-user__btn-user {
     margin-left: 6px;
     position: relative;
+    min-width: 30px;
+    padding: 0 12px;
 }
 
 .header-user__btn-user:hover .user-box {
@@ -438,7 +444,7 @@
 
 .user-box {
     position: absolute;
-    top: 100%;
+    top: 126%;
     right: 0;
     background-color: #12171b;
     width: 200px;
@@ -454,9 +460,18 @@
     content: "";
     position: absolute;
     top: -16px;
-    right: 40px;
+    right: 10px;
     border: 8px solid;
     border-color: transparent transparent #12171b transparent;
+}
+
+.user-box::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 12px;
+    background-color: transparent;
 }
 
 .user-box>li {
@@ -1087,31 +1102,8 @@
 .user-mobile {
     display: flex;
     align-items: center;
-}
-
-.menu-mobile {
-    transform: translateX(3px);
-}
-
-.search-mobile,
-.user-mobile {
-    transform: translateX(-12px);
-}
-
-.menu-mobile__btn,
-.search-mobile__btn,
-.user-mobile__btn {
-    width: 40px;
-    height: 30px;
-    background-color: #224361;
-    border: none;
-    outline: none;
-    transform: translateY(2px);
-    display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.07), 0 1px 3px rgba(0, 0, 0, 0.29);
+    cursor: pointer;
 }
 
 .menu-mobile__icon {
