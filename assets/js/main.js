@@ -286,7 +286,7 @@ popularPosts.forEach(function (popularPost) {
 
 // fill infoFilm to xpoMiniInfo
 function fillDataToXpoMiniInfo(xpoMiniInfo, infoFilm) {
-    if (infoFilm) {
+    if (xpoMiniInfo && infoFilm) {
         xpoMiniInfo.querySelector(".xpo-mini-info__name").textContent = infoFilm.dataset.name
         xpoMiniInfo.querySelector(".xpo-mini-info__original-name").textContent = infoFilm.dataset.originalName
         xpoMiniInfo.querySelector(".xpo-mini-info__imdb").lastChild.textContent = infoFilm.dataset.imdb
@@ -301,13 +301,13 @@ function fillDataToXpoMiniInfo(xpoMiniInfo, infoFilm) {
 // box mini info film: show/hiden when mouse hover, bla bla,....
 const xpoItems = document.querySelectorAll(".xpo-item, .xpo-slide-full__item")
 const xpoMiniInfo = document.querySelector(".xpo-mini-info")
-xpoMiniInfo.onmouseover = function () {
-    xpoMiniInfo.style.display = "block"
-    xpoMiniInfo.onmousemove = function (event) {
-        xpoMiniInfo.style.left = -50 + event.pageX + "px"
-        xpoMiniInfo.style.top = 20 + event.pageY + "px"
-    }
-}
+// xpoMiniInfo.onmouseover = function () {
+//     xpoMiniInfo.style.display = "block"
+//     xpoMiniInfo.onmousemove = function (event) {
+//         xpoMiniInfo.style.left = -50 + event.pageX + "px"
+//         xpoMiniInfo.style.top = 20 + event.pageY + "px"
+//     }
+// }
 xpoMiniInfo.onmouseleave = function () {
     xpoMiniInfo.style.display = "none"
 }
@@ -317,11 +317,15 @@ xpoItems.forEach(function (xpoItem) {
 
     // handle hiden/show when mouseover/mouseout
     xpoItem.onmouseover = function () {
-        fillDataToXpoMiniInfo(xpoMiniInfo, infoFilm)
-        xpoMiniInfo.style.display = "block"
-        xpoItem.onmousemove = function (event) {
-            xpoMiniInfo.style.left = -50 + event.pageX + "px"
-            xpoMiniInfo.style.top = 30 + event.pageY + "px"
+        const width = window.innerWidth
+        if (width >= 740) {
+            fillDataToXpoMiniInfo(xpoMiniInfo, infoFilm)
+            xpoMiniInfo.style.display = "block"
+            xpoItem.onmousemove = function (event) {
+                if (width - event.pageX < 320) xpoMiniInfo.style.left = width - 320 + "px"
+                else xpoMiniInfo.style.left = -50 + event.pageX + "px"
+                xpoMiniInfo.style.top = 30 + event.pageY + "px"
+            }
         }
     }
     xpoItem.onmouseleave = function () {
