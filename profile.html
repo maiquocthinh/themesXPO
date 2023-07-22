@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xem phim</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Charis+SIL&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-rating-svg@3.5.0/src/css/star-rating-svg.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+  <link rel="stylesheet" href="./assets/css/grid.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/owl.theme.custom.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+
+<body>
+  <div class="app">
+    <!-- Heading -->
+    <header class="header">
+      <div class="grid wide">
+        <div class="header-top row">
+          <div class="menu-mobile active col col-lg-0 col-md-0 col-sm-2">
+              <i id="navbar-mobile__icon-list" class="iconify menu-mobile__icon" data-icon="bi:card-list"></i>
+              <i id="navbar-mobile__icon-close" class="iconify menu-mobile__icon" style="display: none;" data-icon="mdi:close-box-outline"></i>
+          </div>
+
+          <div class="header-logo col col-lg-3 col-md-3 col-sm-7">
+            <a href="./" class="header-logo-link">
+              <h1 class="header-logo__logo">PhimBox.ml xem phim trực tuyến chất lượng cao!</h1>
+            </a>
+          </div>
+        
+          <div class="header-search col col-lg-5 col-md-6 col-sm-10 col-sm-o-1 sm-hidden">
+            <div class="header-search__box">
+              <input type="text" placeholder="Nhập từ khóa tìm kiếm..." class="header-search__input">
+              <i class="iconify header-search__icon-search" data-icon="bx:search"></i>
+              <i class="iconify header-search__icon-load hidden" data-icon="eos-icons:loading"></i>
+            </div>
+            <ul class="header-search__results-list">
+              <li class="header-search__results-item">Kết quả cho: <span>Từ khóa</span></li>
+              <li class="header-search__results-item">
+                <a href="#" title="Chim Ưng và Chiến Binh Mùa Đông (Phần 1) - 2/? Vietsub">
+                  <div class="header-search__results-box">
+                    <div class="results-box__image">
+                      <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1616231596/phimbox_images/Poster-chim-ung-va-chien-binh-mua-dong-phan-1.jpg" alt="Chim Ưng và Chiến Binh Mùa Đông (Phần 1)">
+                    </div>
+                    <div class="results-box__info">
+                      <span for="" class="results-box__info-name">Chim Ưng và Chiến Binh Mùa Đông (Phần 1)</span>
+                      <span for="" class="results-box__info-engname">The Falcon and the Winter Soldier (Season 1)</span>
+                      <span for="" class="results-box__info-status"><span>2/? - Vietsub</span></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="header-search__results-item">
+                <a href="#" title="Nhím Sonic - HD Vietsub + Thuyết Minh">
+                  <div class="header-search__results-box">
+                    <div class="results-box__image">
+                      <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597641287/phimbox_images/Poster-nhim-sonic.jpg" alt="Nhím Sonic">
+                    </div>
+                    <div class="results-box__info">
+                      <span for="" class="results-box__info-name">Nhím Sonic</span>
+                      <span for="" class="results-box__info-engname">Sonic The Hedgehog</span>
+                      <span for="" class="results-box__info-status"><span>HD Vietsub + Thuyết Minh</span></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="header-search__results-item">
+                <a href="#" title="Ráp Phờ Đập Phá - HD Vietsub">
+                  <div class="header-search__results-box">
+                    <div class="results-box__image">
+                      <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597306188/phimbox_images/Poster-rap-pho-dap-pha.jpg" alt="Ráp Phờ Đập Phá">
+                    </div>
+                    <div class="results-box__info">
+                      <span for="" class="results-box__info-name">Ráp Phờ Đập Phá</span>
+                      <span for="" class="results-box__info-engname">Wreck It Ralph</span>
+                      <span for="" class="results-box__info-status"><span>HD - Vietsub</span></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="header-search__results-item">
+                <a href="#" title="Thánh Phồng Tôm (Phần 1) - Full 12/12 + OVA Vietsub">
+                  <div class="header-search__results-box">
+                    <div class="results-box__image">
+                      <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1597307178/phimbox_images/Poster-thanh-phong-tom-phan-1.jpg" alt="Thánh Phồng Tôm (Phần 1)">
+                    </div>
+                    <div class="results-box__info">
+                      <span for="" class="results-box__info-name">Thánh Phồng Tôm (Phần 1)</span>
+                      <span for="" class="results-box__info-engname">One Punch Man (Season 1)</span>
+                      <span for="" class="results-box__info-status"><span>Full 12/12 + OVA - Vietsub</span></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="header-search__results-item">
+                <a href="#" title="	Phẩm Chất Quý Cô / Từ Khóa Tình Yêu - 16/16 Thuyết Minh">
+                  <div class="header-search__results-box">
+                    <div class="results-box__image">
+                      <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1613893161/phimbox_images/Poster-pham-chat-quy-co-tu-khoa-tinh-yeu.jpg" alt="	Phẩm Chất Quý Cô / Từ Khóa Tình Yêu">
+                    </div>
+                    <div class="results-box__info">
+                      <span for="" class="results-box__info-name"> Phẩm Chất Quý Cô / Từ Khóa Tình Yêu</span>
+                      <span for="" class="results-box__info-engname">Search: WWW</span>
+                      <span for="" class="results-box__info-status"><span>16/16 Thuyết Minh</span></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="header-search__results-item">
+                <a href="#" title="Wanda và Vision (Phần 1) - 9/9 Vietsub + Thuyết Minh">
+                  <div class="header-search__results-box">
+                    <div class="results-box__image">
+                      <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1612932327/phimbox_images/Poster-wanda-va-vision-phan-1.jpg" alt="Wanda và Vision (Phần 1)">
+                    </div>
+                    <div class="results-box__info">
+                      <span for="" class="results-box__info-name">Wanda và Vision (Phần 1)</span>
+                      <span for="" class="results-box__info-engname">Wanda Vision (Season 1)</span>
+                      <span for="" class="results-box__info-status"><span>9/9 Vietsub + Thuyết Minh</span></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          
+          <div class="wrap-header-action col col-lg-4 col-md-3 col-sm-3">
+            <div class="search-mobile md-hidden lg-hidden">
+                <i id="navbar-mobile__icon-search" class="iconify search-mobile__icon" data-icon="bx:search"></i>
+                <i id="navbar-mobile__icon-close-search" class="iconify menu-mobile__icon" style="display: none;" data-icon="mdi:close-box-outline"></i>
+            </div>
+            <div class="user-mobile md-hidden lg-hidden">
+              <!-- Chua login/register -->
+              <i class="iconify user-mobile__icon" data-icon="tabler:login" data-flip="horizontal"></i>
+            </div>
+            <div class="header-user">
+              <div class="header-user__wrap-btns">
+                <!-- Chua login/register -->
+                <div id="btn-login" class="header-user__btn btn sm-hidden">
+                  <i class="header-user__icon iconify" data-icon="tabler:login" data-flip="horizontal"></i> <span>Đăng Nhập</span>
+                </div>
+                <div id="btn-register" class="header-user__btn btn sm-hidden">
+                  <i class="header-user__icon iconify" data-icon="gridicons:multiple-users"></i> <span>Đăng Ký</span>
+                </div>
+                <!-- Da login/register -->
+                <!-- <div class="header-user__btn-notify btn">
+                    <i class="iconify" data-icon="fontisto:bell-alt"></i>
+                    <div class="notify-box">
+                        <h3 class="notify-box__title">Thông báo</h3>
+                        <ul class="notify-box__list">
+                            <li><span>Bạn nhận được 100 XU từ nhiệm vụ đăng nhập điểm danh mỗi ngày</span></li>
+                            <li><span>Bạn nhận được 200 XU từ nhiệm vụ cập nhật Avatar</span></li>
+                            <li><span>Chào mừng bạn đã đến với BiluTV. Hãy nhớ tên tài khoản và mật khẩu của bạn để khi tên miền webiste bị chặn bạn có thể đăng nhập lại và không bị mất dữ liệu.</span></li>
+                            <li><span>Bạn nhận được 100 XU từ nhiệm vụ đăng nhập điểm danh mỗi ngày</span></li>
+                            <li><span>Bạn nhận được 200 XU từ nhiệm vụ cập nhật Avatar</span></li>
+                            <li><span>Chào mừng bạn đã đến với BiluTV. Hãy nhớ tên tài khoản và mật khẩu của bạn để khi tên miền webiste bị chặn bạn có thể đăng nhập lại và không bị mất dữ liệu.</span></li>
+                            <li><span>Bạn nhận được 100 XU từ nhiệm vụ đăng nhập điểm danh mỗi ngày</span></li>
+                        </ul>
+                    </div>
+                    <div class="notify-box-arrow-up"></div>
+                </div>
+                <div class="header-user__btn-user btn">
+                    <img src="./assets/images/User-avatar.png" alt="" class="header-user__btn-user-avatar">
+                    <span class="header-user__btn-user-name sm-hidden">ahakun</span>
+                    <i class="iconify header-user__btn-user-icon-down sm-hidden" data-icon="akar-icons:chevron-down"></i>
+                    <ul class="user-box">
+                        <li><a href="#"><i class="iconify user-box__icon" data-icon="carbon:user-filled"></i><span>Thông tin tài khoản</span></a></li>
+                        <li><a href="#"><i class="iconify user-box__icon" data-icon="ph:film-script-fill"></i><span>Tủ phim</span></a></li>
+                        <li><a href="#"><i class="iconify user-box__icon" data-icon="bx:film"></i><span>Phim đang theo dõi</span></a></li>
+                        <li><a href="#"><i class="iconify user-box__icon" data-icon="dashicons:lock"></i><span>Thay đổi thông tin</span></a></li>
+                        <li><a href="#"><i class="iconify user-box__icon" data-icon="wpf:shutdown"></i><span>Đăng xuất</span></a></li>
+                    </ul>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="header-navbar sm-hidden">
+        <div class="grid wide">
+          <div class="row">
+            <nav class="col col-lg-12 col-md-12 col-sm-0 col-sm-12">
+              <ul class="header-navbar__home-menu">
+                <li class="header-navbar__menu-item"><a href="./" title="Trang Chủ"><i class="iconify header-navbar__menu-icon" data-icon="dashicons:admin-home"></i><span>Trang Chủ</span></a></li>
+                <li class="header-navbar__menu-item dropdown">
+                  <a href="javascript:;" title="Thể Loại"><i class="iconify header-navbar__menu-icon" data-icon="dashicons:category"></i><span>Thể Loại</span><span class="iconify header-navbar__menu-icon-down" data-icon="bi:caret-down-fill"></span></a>
+                  <ul class="dropdown-list sm-hidden">
+                    <li><a href="./list.html" title="Cổ Trang - Thần Thoại">Cổ Trang - Thần Thoại</a></li>
+                    <li><a href="./list.html" title="Phim 18+">Phim 18+</a></li>
+                    <li><a href="./list.html" title="Truyền hình">Truyền hình</a></li>
+                    <li><a href="./list.html" title="Kinh Dị">Kinh Dị</a></li>
+                    <li><a href="./list.html" title="Anime">Anime</a></li>
+                    <li><a href="./list.html" title="Lãng mạn">Lãng mạn</a></li>
+                    <li><a href="./list.html" title="Hành Động">Hành Động</a></li>
+                    <li><a href="./list.html" title="Tình Cảm">Tình Cảm</a></li>
+                    <li><a href="./list.html" title="Phiêu Lưu">Phiêu Lưu</a></li>
+                    <li><a href="./list.html" title="Hoạt Hình">Hoạt Hình</a></li>
+                    <li><a href="./list.html" title="Võ Thuật">Võ Thuật</a></li>
+                    <li><a href="./list.html" title="Hài Hước">Hài Hước</a></li>
+                    <li><a href="./list.html" title="Âm nhạc">Âm nhạc</a></li>
+                    <li><a href="./list.html" title="Tâm Lý">Tâm Lý</a></li>
+                    <li><a href="./list.html" title="Học Đường">Học Đường</a></li>
+                    <li><a href="./list.html" title="Tài liệu">Tài liệu</a></li>
+                    <li><a href="./list.html" title="Hình Sự">Hình Sự</a></li>
+                    <li><a href="./list.html" title="Viễn Tưởng">Viễn Tưởng</a></li>
+                    <li><a href="./list.html" title="Gia đình">Gia đình</a></li>
+                    <li><a href="./list.html" title="Thần Thoại">Thần Thoại</a></li>
+                    <li><a href="./list.html" title="Chiến Tranh">Chiến Tranh</a></li>
+                    <li><a href="./list.html" title="Shows">Shows</a></li>
+                    <li><a href="./list.html" title="Cổ Trang">Cổ Trang</a></li>
+                  </ul>
+                </li>
+                <li class="header-navbar__menu-item dropdown">
+                  <a href="javascript:;" title="Quốc Gia"><i class="iconify header-navbar__menu-icon" data-icon="ion:earth"></i><span>Quốc Gia</span><span class="iconify header-navbar__menu-icon-down" data-icon="bi:caret-down-fill"></span></a>
+                  <ul class="dropdown-list sm-hidden">
+                    <li><a href="./list.html" title="Việt Nam">Việt Nam</a></li>
+                    <li><a href="./list.html" title="Úc">Úc</a></li>
+                    <li><a href="./list.html" title="Canada">Canada</a></li>
+                    <li><a href="./list.html" title="Châu Á">Châu Á</a></li>
+                    <li><a href="./list.html" title="Anh">Anh</a></li>
+                    <li><a href="./list.html" title="Nga">Nga</a></li>
+                    <li><a href="./list.html" title="Pháp">Pháp</a></li>
+                    <li><a href="./list.html" title="Châu Âu">Châu Âu</a></li>
+                    <li><a href="./list.html" title="Trung Quốc">Trung Quốc</a></li>
+                    <li><a href="./list.html" title="Hàn Quốc">Hàn Quốc</a></li>
+                    <li><a href="./list.html" title="Đài Loan">Đài Loan</a></li>
+                    <li><a href="./list.html" title="Hồng Kông">Hồng Kông</a></li>
+                    <li><a href="./list.html" title="Nhật Bản">Nhật Bản</a></li>
+                    <li><a href="./list.html" title="Mỹ">Mỹ</a></li>
+                    <li><a href="./list.html" title="Thái Lan">Thái Lan</a></li>
+                    <li><a href="./list.html" title="Ấn Độ">Ấn Độ</a></li>
+                  </ul>
+                </li>
+                <li class="header-navbar__menu-item"><a href="./list.html" title="Phim lẻ"><i class="iconify header-navbar__menu-icon" data-icon="bx:film"></i><span>Phim lẻ</span></a></li>
+                <li class="header-navbar__menu-item"><a href="./list.html" title="Phim Bộ"><i class="iconify header-navbar__menu-icon" data-icon="mdi:filmstrip-box-multiple"></i><span>Phim Bộ</span></a></li>
+                <li class="header-navbar__menu-item"><a href="./list.html" title="Phim Chiếu Rạp"><i class="iconify header-navbar__menu-icon" data-icon="iconoir:cinema-old"></i><span>Phim Chiếu Rạp</span></a></li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--  Container -->
+    <div class="container grid wide">
+        <main class="main-content">
+          <section class="xpo-profile row sm-gutter">
+            <div class="col col-lg-3 col-md-12 col-sm-12">
+                <div class="xpo-profile__overview-box">
+                  <div class="avatar">
+                    <img class="avatar__image" src="https://animeaz.me/public/assets/client/images/Default-avt/08.webp" alt="yipaxo">
+                    <div class="avatar__upload">
+                      <i class="iconify" data-icon="uil:image-edit"></i>
+                    </div>
+                  </div>
+                  <h2 class="fullname">yipaxo</h2>
+                  <h4 class="idname">@yipaxo3297</h4>
+                  <span class="join-date">Tham gia: 21/07/2023</span>
+                  <p class="profile-sefl">i'm wibi :))))</p>
+                  <textarea id="link-profile" readonly>https://localhost/profile/yipaxo3297</textarea>
+                  <button class="btn btn-copy-link-profile" onclick="copyProfileLink()">
+                    <i class="iconify" data-icon="mingcute:copy-2-line"></i>
+                    Sao chép liên kết
+                  </button>
+                </div>
+            </div>
+            <div class="col col-lg-9 col-md-12 col-sm-12">
+                <div class="xpo-profile__content">
+                  <ul class="xpo-profile__tabs">
+                    <li class="xpo-profile__tabs-item active">Tài khoản</li>
+                    <li class="xpo-profile__tabs-item">Lịch sử xem</li>
+                    <li class="xpo-profile__tabs-item">Phim đã lưu</li>
+                    <li class="xpo-profile__tabs-item">Phim theo dõi</li>
+                  </ul>
+                  <div class="xpo-profile__tabs-content">
+                    <div class="xpo-profile__tabs-content__item active">
+                      <div class="xpo-profile__tabs-content__item--title">
+                        <i class="iconify" data-icon="mingcute:user-4-line"></i>
+                        Thông tin tài khoản
+                      </div>
+                      <div class="xpo-profile__tabs-content__item--form">
+                        <form>
+                          <input type="text" name="fullname"  class="form-input" placeholder="Họ tên" required>
+                          <input type="text" name="username"  class="form-input" placeholder="Tên đăng nhập" readonly>
+                          <input type="email" name="email"  class="form-input" placeholder="Email" required>
+                          <input type="password" name="password"  class="form-input" placeholder="Mật khẩu (bỏ qua nếu không cần cập nhật)">
+                          <textarea type="text" name="profile_sefl"  class="form-input" placeholder="Mô tả"></textarea>
+                          <button type="submit" class="btn">Cập nhật</button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="xpo-profile__tabs-content__item">
+                      <div class="xpo-profile__tabs-content__item--title">
+                        <i class="iconify" data-icon="mingcute:history-line"></i>
+                        Lịch sử xem
+                      </div>
+                      <div class="xpo-profile__tabs-content__history">
+                        <div class="tabs-content__history--item">
+                          <div class="poster">
+                            <img src="https://animeaz.me/zip/uploads/main-qimg-b6357bed94f48f48f0e0b9313239450d.webp" alt="One Pice">
+                          </div>
+                          <a class="ep-name" href="./info.html">Tập 1069 - One Piece</a>
+                          <span class="date">17:05:06 21/07/2023</span>
+                          <span class="xpo-remove" onclick="removeEpWatched(event)">&times;</span>
+                        </div>
+                        <div class="tabs-content__history--item">
+                          <div class="poster">
+                            <img src="https://animeaz.me/zip/uploads/one-piece-film-red.webp" alt="One Piece Film: Red">
+                          </div>
+                          <a class="ep-name" href="./info.html">Tập full - One Piece Film: Red</a>
+                          <span class="date">17:00:54 21/07/2023</span>
+                          <span class="xpo-remove" onclick="removeEpWatched(event)">&times;</span>
+                        </div>
+                        <div class="tabs-content__history--item">
+                          <div class="poster">
+                            <img src="https://animeaz.me/zip/uploads/macross-movie-2-zettai-live.webp" alt="Macross Δ Movie 2: Zettai Live!!!">
+                          </div>
+                          <a class="ep-name" href="./info.html">Tập full - Macross Δ Movie 2: Zettai Live!!!</a>
+                          <span class="date">02:33:20 26/04/2023</span>
+                          <span class="xpo-remove" onclick="removeEpWatched(event)">&times;</span>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="xpo-profile__tabs-content__item">
+                      <div class="xpo-profile__tabs-content__item--title">
+                        <i class="iconify" data-icon="mingcute:box-2-line"></i>
+                        Tủ phim
+                      </div>
+                      <div class="xpo-profile__tabs-content__item--search">
+                        <label for="search_input">Tìm kiếm:</label>
+                        <input class="search_input" id="colection_search" type="text" name="search_input" placeholder="Nhập tên phim..">
+                      </div>
+                      <div class="row md-gutter" id="colection_box">
+                        <div class="item col col-lg-3 col-md-4 col-sm-6">
+                          <div class="xpo-item">
+                            <a class="xpo-thumb" href="./info.html" title="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)">
+                              <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1616846455/phimbox_images/Poster-lien-minh-cong-ly-phien-ban-cua-zack-snyder.jpg" alt="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)">
+                              <span class="xpo-status">HD</span>
+                              <span class="xpo-year">2021</span>
+                              <span class="xpo-language">Vietsub</span>
+                              <div class="xpo-icon-overlay"></div>
+                              <span class="xpo-remove" onclick="removeFilmElement(event);">&times;</span>
+                            </a>
+                            <div class="xpo-content">
+                              <div class="xpo-content__name">
+                                <h3 class="xpo-vn-name">
+                                  <a href="./info.html" title="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)">Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)</a>
+                                </h3>
+                                <p class="xpo-original-name">Zack Snyder’s Justice League</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item col col-lg-3 col-md-4 col-sm-6">
+                          <div class="xpo-item">
+                            <a class="xpo-thumb" href="./info.html" title="Wanda và Vision (Phần 1) - Wanda Vision (Season 1) (2021)">
+                              <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1612932327/phimbox_images/Poster-wanda-va-vision-phan-1.jpg" alt="Wanda và Vision (Phần 1) - Wanda Vision (Season 1) (2021)">
+                              <span class="xpo-status">9/9</span>
+                              <span class="xpo-year">1999</span>
+                              <span class="xpo-language">Vietsub + Thuyết Minh</span>
+                              <div class="xpo-icon-overlay"></div>
+                              <span class="xpo-remove" onclick="removeFilmElement(event);">&times;</span>
+                            </a>
+                            <div class="xpo-content">
+                              <div class="xpo-content__name">
+                                <h3 class="xpo-vn-name">
+                                  <a href="./info.html" title="Wanda và Vision (Phần 1) - Wanda Vision (Season 1) (2021)">Wanda và Vision (Phần 1)</a>
+                                </h3>
+                                <p class="xpo-original-name">Wanda Vision (Season 1)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item col col-lg-3 col-md-4 col-sm-6">
+                          <div class="xpo-item">
+                            <a class="xpo-thumb" href="./info.html" title="Câu Chuyện Đồ Chơi 2 - Toy Story 2 (1999)">
+                              <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1612969196/phimbox_images/Poster-cau-chuyen-do-choi-2.jpg" alt="Câu Chuyện Đồ Chơi 2 - Toy Story 2 (1999)">
+                              <span class="xpo-status">HD</span>
+                              <span class="xpo-year">1999</span>
+                              <span class="xpo-language">Vietsub + Thuyết Minh</span>
+                              <div class="xpo-icon-overlay"></div>
+                              <span class="xpo-remove" onclick="removeFilmElement(event);">&times;</span>
+                            </a>
+                            <div class="xpo-content">
+                              <div class="xpo-content__name">
+                                <h3 class="xpo-vn-name">
+                                  <a href="./info.html" title="Câu Chuyện Đồ Chơi 2 - Toy Story 2 (1999)">Câu Chuyện Đồ Chơi 2</a>
+                                </h3>
+                                <p class="xpo-original-name">Toy Story 2</p>
+                              </div>
+          
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item col col-lg-3 col-md-4 col-sm-6">
+                          <div class="xpo-item">
+                            <a class="xpo-thumb" href="./info.html" title="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)">
+                              <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1616846455/phimbox_images/Poster-lien-minh-cong-ly-phien-ban-cua-zack-snyder.jpg" alt="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)">
+                              <span class="xpo-status">HD</span>
+                              <span class="xpo-year">2021</span>
+                              <span class="xpo-language">Vietsub</span>
+                              <div class="xpo-icon-overlay"></div>
+                              <span class="xpo-remove" onclick="removeFilmElement(event);">&times;</span>
+                            </a>
+                            <div class="xpo-content">
+                              <div class="xpo-content__name">
+                                <h3 class="xpo-vn-name">
+                                  <a href="./info.html" title="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)">Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)</a>
+                                </h3>
+                                <p class="xpo-original-name">Zack Snyder’s Justice League</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item col col-lg-3 col-md-4 col-sm-6">
+                          <div class="xpo-item">
+                            <a class="xpo-thumb" href="./info.html" title="Wanda và Vision (Phần 1) - Wanda Vision (Season 1) (2021)">
+                              <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1612932327/phimbox_images/Poster-wanda-va-vision-phan-1.jpg" alt="Wanda và Vision (Phần 1) - Wanda Vision (Season 1) (2021)">
+                              <span class="xpo-status">9/9</span>
+                              <span class="xpo-year">1999</span>
+                              <span class="xpo-language">Vietsub + Thuyết Minh</span>
+                              <div class="xpo-icon-overlay"></div>
+                              <span class="xpo-remove" onclick="removeFilmElement(event);">&times;</span>
+                            </a>
+                            <div class="xpo-content">
+                              <div class="xpo-content__name">
+                                <h3 class="xpo-vn-name">
+                                  <a href="./info.html" title="Wanda và Vision (Phần 1) - Wanda Vision (Season 1) (2021)">Wanda và Vision (Phần 1)</a>
+                                </h3>
+                                <p class="xpo-original-name">Wanda Vision (Season 1)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="xpo-profile__tabs-content__item">
+                      <div class="xpo-profile__tabs-content__item--title">
+                        <i class="iconify" data-icon="ant-design:eye-outlined"></i>
+                        Phim đã theo dõi
+                      </div>
+                      <div class="xpo-profile__tabs-content__item--search">
+                        <label for="search_input">Tìm kiếm:</label>
+                        <input class="search_input" id="follow_search" type="text" name="search_input" placeholder="Nhập tên phim..">
+                      </div>
+                      <div class="row md-gutter" id="follow_box">
+                        <div class="item col col-lg-3 col-md-4 col-sm-6">
+                          <div class="xpo-item">
+                            <a class="xpo-thumb" href="./info.html" title="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)">
+                              <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1616846455/phimbox_images/Poster-lien-minh-cong-ly-phien-ban-cua-zack-snyder.jpg" alt="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)">
+                              <span class="xpo-status">HD</span>
+                              <span class="xpo-year">2021</span>
+                              <span class="xpo-language">Vietsub</span>
+                              <div class="xpo-icon-overlay"></div>
+                              <span class="xpo-remove" onclick="removeFilmElement(event);">&times;</span>
+                            </a>
+                            <div class="xpo-content">
+                              <div class="xpo-content__name">
+                                <h3 class="xpo-vn-name">
+                                  <a href="./info.html" title="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)">Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)</a>
+                                </h3>
+                                <p class="xpo-original-name">Zack Snyder’s Justice League</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item col col-lg-3 col-md-4 col-sm-6">
+                          <div class="xpo-item">
+                            <a class="xpo-thumb" href="./info.html" title="Wanda và Vision (Phần 1) - Wanda Vision (Season 1) (2021)">
+                              <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1612932327/phimbox_images/Poster-wanda-va-vision-phan-1.jpg" alt="Wanda và Vision (Phần 1) - Wanda Vision (Season 1) (2021)">
+                              <span class="xpo-status">9/9</span>
+                              <span class="xpo-year">1999</span>
+                              <span class="xpo-language">Vietsub + Thuyết Minh</span>
+                              <div class="xpo-icon-overlay"></div>
+                              <span class="xpo-remove" onclick="removeFilmElement(event);">&times;</span>
+                            </a>
+                            <div class="xpo-content">
+                              <div class="xpo-content__name">
+                                <h3 class="xpo-vn-name">
+                                  <a href="./info.html" title="Wanda và Vision (Phần 1) - Wanda Vision (Season 1) (2021)">Wanda và Vision (Phần 1)</a>
+                                </h3>
+                                <p class="xpo-original-name">Wanda Vision (Season 1)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item col col-lg-3 col-md-4 col-sm-6">
+                          <div class="xpo-item">
+                            <a class="xpo-thumb" href="./info.html" title="Câu Chuyện Đồ Chơi 2 - Toy Story 2 (1999)">
+                              <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1612969196/phimbox_images/Poster-cau-chuyen-do-choi-2.jpg" alt="Câu Chuyện Đồ Chơi 2 - Toy Story 2 (1999)">
+                              <span class="xpo-status">HD</span>
+                              <span class="xpo-year">1999</span>
+                              <span class="xpo-language">Vietsub + Thuyết Minh</span>
+                              <div class="xpo-icon-overlay"></div>
+                              <span class="xpo-remove" onclick="removeFilmElement(event);">&times;</span>
+                            </a>
+                            <div class="xpo-content">
+                              <div class="xpo-content__name">
+                                <h3 class="xpo-vn-name">
+                                  <a href="./info.html" title="Câu Chuyện Đồ Chơi 2 - Toy Story 2 (1999)">Câu Chuyện Đồ Chơi 2</a>
+                                </h3>
+                                <p class="xpo-original-name">Toy Story 2</p>
+                              </div>
+          
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item col col-lg-3 col-md-4 col-sm-6">
+                          <div class="xpo-item">
+                            <a class="xpo-thumb" href="./info.html" title="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)">
+                              <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1616846455/phimbox_images/Poster-lien-minh-cong-ly-phien-ban-cua-zack-snyder.jpg" alt="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)">
+                              <span class="xpo-status">HD</span>
+                              <span class="xpo-year">2021</span>
+                              <span class="xpo-language">Vietsub</span>
+                              <div class="xpo-icon-overlay"></div>
+                              <span class="xpo-remove" onclick="removeFilmElement(event);">&times;</span>
+                            </a>
+                            <div class="xpo-content">
+                              <div class="xpo-content__name">
+                                <h3 class="xpo-vn-name">
+                                  <a href="./info.html" title="Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)">Liên Minh Công Lý: Phiên bản của Zack Snyder - Zack Snyder’s Justice League (2021)</a>
+                                </h3>
+                                <p class="xpo-original-name">Zack Snyder’s Justice League</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item col col-lg-3 col-md-4 col-sm-6">
+                          <div class="xpo-item">
+                            <a class="xpo-thumb" href="./info.html" title="Wanda và Vision (Phần 1) - Wanda Vision (Season 1) (2021)">
+                              <img src="https://res.cloudinary.com/quocthinh-phim/image/upload/w_200,h_285/v1612932327/phimbox_images/Poster-wanda-va-vision-phan-1.jpg" alt="Wanda và Vision (Phần 1) - Wanda Vision (Season 1) (2021)">
+                              <span class="xpo-status">9/9</span>
+                              <span class="xpo-year">1999</span>
+                              <span class="xpo-language">Vietsub + Thuyết Minh</span>
+                              <div class="xpo-icon-overlay"></div>
+                              <span class="xpo-remove" onclick="removeFilmElement(event);">&times;</span>
+                            </a>
+                            <div class="xpo-content">
+                              <div class="xpo-content__name">
+                                <h3 class="xpo-vn-name">
+                                  <a href="./info.html" title="Wanda và Vision (Phần 1) - Wanda Vision (Season 1) (2021)">Wanda và Vision (Phần 1)</a>
+                                </h3>
+                                <p class="xpo-original-name">Wanda Vision (Season 1)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        </main>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="grid wide">
+        <div class="row">
+          <div class="footer-left col col-lg-4 col-md-o-2 col-md-8 col-sm-o-1 col-sm-10">
+            <img src="./assets/images/logonew.png" class="footer-left__logo" alt="PhimBox.ml">
+            <p class="footer-left__description"><a href="#" title="PhimBox">PhimBox</a> - Website luôn cập nhập phim nhanh nhất với chất lượng cao cùng nhiều bộ phim hay và hấp dẫn đang đợi các bạn thưởng thức.</p>
+          </div>
+          <div class="footer-right col col-lg-8 col-md-0 col-sm-0">
+            <div class="row">
+              <div class="col col-lg-3">
+                <h3 class="footer-right__col-heading">Phim Box</h3>
+                <ul>
+                  <li><a href="#" title="Phim Lẻ Mới">Phim Lẻ Mới</a></li>
+                  <li><a href="#" title="Phim Bộ Mới">Phim Bộ Mới</a></li>
+                  <li><a href="#" title="Phim Chiếu Rạp">Phim Chiếu Rạp</a></li>
+                  <li><a href="#" title="Phim Hoạt Hình">Phim Hoạt Hình</a></li>
+                </ul>
+              </div>
+              <div class="col col-lg-3">
+                <h3 class="footer-right__col-heading">Phim Lẻ</h3>
+                <ul>
+                  <li><a href="#" title="Phim Lẻ Mới">Phim Hành Động</a></li>
+                  <li><a href="#" title="Phim Bộ Mới">Phim Võ Thuật</a></li>
+                  <li><a href="#" title="Phim Chiếu Rạp">Phim Viễn Tưởng</a></li>
+                  <li><a href="#" title="Phim Hoạt Hình">Phim Phiêu Lưu</a></li>
+                  <li><a href="#" title="Phim Hoạt Hình">Phim Kinh Dị</a></li>
+                </ul>
+              </div>
+              <div class="col col-lg-3">
+                <h3 class="footer-right__col-heading">Phim Bộ</h3>
+                <ul>
+                  <li><a href="#" title="Phim Lẻ Mới">Phim Tài Liệu</a></li>
+                  <li><a href="#" title="Phim Bộ Mới">Phim Hàn Quốc</a></li>
+                  <li><a href="#" title="Phim Chiếu Rạp">Phim Tình Cảm</a></li>
+                </ul>
+              </div>
+              <div class="col col-lg-3">
+                <h3 class="footer-right__col-heading">Liên Hệ</h3>
+                <p style="font: 1.4rem 'Open Sans';color: #717171; font-weight: 600;">
+                  Phone: 0123.456.789
+                  <br> Email: quocthinh.phim@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright <i class="iconify" data-icon="fa6-regular:copyright"></i> 2022 - Phiên Bản Thử Nghiệm. Code by: quocthinh</p>
+      </div>
+    </footer>
+    <!-- Auth Modal -->
+    <div class="auth-modal hidden">
+      <div class="auth-modal__overlay"></div>
+      <div class="auth-modal__dialog">
+        <div class="modal-dialog__tabs">
+          <ul class="modal-dialog__tabs-list">
+            <li id="modal-dialog__tab-login" class="modal-dialog__tabs-item active"><i class="iconify header-user__icon" data-icon="tabler:login" data-flip="horizontal"></i> <span>Đăng Nhập</span></li>
+            <li id="modal-dialog__tab-register" class="modal-dialog__tabs-item"><i class="iconify header-user__icon" data-icon="gridicons:multiple-users"></i> <span>Đăng Ký</span></li>
+            <li><a href="#" class="modal-dialog__tabs-close"><i class="iconify" data-icon="ion:close"></i></a></li>
+          </ul>
+        </div>
+        <div class="modal-dialog__content">
+          <div class="modal-login">
+            <form action="" method="post">
+              <input type="text" class="form-input" placeholder="Tên đăng nhập hoặc Email" required>
+              <input type="password" class="form-input" placeholder="Mật khẩu" required>
+              <div class="form-aside">
+                <label for="" class="remember-user"><input type="checkbox" class="accept-checkbox">Nhớ tài khoản</label>
+                <a href="#" class="forgot-user">Quên mật khẩu?</a>
+              </div>
+              <button type="submit" class="modal-btn-submit">Đăng Nhập</button>
+            </form>
+          </div>
+          <div class="modal-register hidden">
+            <form action="" method="post">
+              <input type="text" class="form-input" placeholder="Họ tên" required>
+              <input type="text" class="form-input" placeholder="Tên đăng nhập" required>
+              <input type="email" class="form-input" placeholder="Email" required>
+              <input type="password" class="form-input" placeholder="Mật khẩu" required>
+              <input type="password" class="form-input" placeholder="Xác nhận mật khẩu" required>
+              <div class="form-aside">
+                <label for="" class="user-accept"><input type="checkbox" required>Tôi đồng ý với <a href="#">điều khoản sử dụng</a></label>
+              </div>
+              <button type="submit" class="modal-btn-submit">Đăng Ký</button>
+            </form>
+          </div>
+          <div class="modal-forgot hidden">
+            <form action="" method="post">
+              <h3>Đặt Lại Mật Khẩu</h3>
+              <p>Chúng tôi sẽ gửi link reset password đến email của bạn, truy cập vào link để reset password.</p>
+              <input type="email" class="form-input" placeholder="Email của bạn" required>
+              <button type="submit" class="modal-btn-submit">Gửi</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scroll Top -->
+    <div id="scroll-top">
+      <i class="iconify scroll-top__icon" data-icon="bi:arrow-up-short"></i>
+    </div>
+  </div>
+
+
+  <!-- Javascripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.2.1/iconify.min.js" integrity="sha512-sU5Gzc108d8ERAXEUoNh3DZQ3GZCQyygVkeuhIxFR+D9Go8kLw3Ce3HVD/AI5cnhGzW7Km9V4oOOiepKcD0vlg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/profile.js"></script>
+</body>
+
+</html>
