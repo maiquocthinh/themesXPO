@@ -110,6 +110,36 @@ if (btnSaveInfo) {
     }
 }
 
+// handle update avatar
+const avatarInput = document.getElementById("avatar_input")
+if (avatarInput) {
+    let blobUrl = ""
+    avatarInput.onchange = function () {
+        const file = this.files[0]
+        if (!file) return
+        if (!confirm("Bạn có muốn đổi avatar thành hình này không?")) return
+
+        const imgElm = document.querySelector(".xpo-profile__overview-box .avatar__image")
+
+        if (blobUrl) URL.revokeObjectURL(blobUrl)
+        blobUrl = URL.createObjectURL(file)
+
+        // call api upload
+        const notification = notyf.open({
+            message: "Image Uploading",
+            background: "#9c9cff",
+            duration: 90000, // 30 minutes
+            icon: { className: "gg-spinner-two", tagName: "i", color: "none" },
+        })
+        // emulator fetch
+        setTimeout(function () {
+            notyf.dismiss(notification)
+            notyf.success("Change avatar success!")
+            imgElm.src = blobUrl
+        }, 4000)
+    }
+}
+
 // handle remove ep watched
 function removeEpWatched(event) {
     // call api to remove, if success remove element from dom

@@ -19,11 +19,11 @@
         flex-direction: column;
     }
 
-    .header-navbar__menu-item>a {
+    .header-navbar__menu-item > a {
         display: block;
         width: 100%;
         padding: 0 15px;
-        -webkit-tap-highlight-color: transparent
+        -webkit-tap-highlight-color: transparent;
     }
 
     .header-navbar__menu-icon-down {
@@ -45,7 +45,7 @@
         width: 50%;
     }
 
-    .header-navbar__menu-item.dropdown>a:hover~.dropdown-list,
+    .header-navbar__menu-item.dropdown > a:hover ~ .dropdown-list,
     .dropdown-list:hover {
         z-index: 2;
     }
@@ -82,8 +82,30 @@
     .xpo-film-media {
         padding: 0 8px;
     }
-}
 
+    /* PROFILE */
+    .xpo-profile {
+        padding: 0 8px;
+    }
+
+    .tabs-content__history--item .content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .xpo-profile__content .xpo-profile__tabs-item {
+        font-size: 1.2rem;
+    }
+
+    .tabs-content__history--item .ep-name {
+        font-size: 1.4rem;
+    }
+
+    .tabs-content__history--item .date {
+        font-size: 1.2rem;
+    }
+}
 
 /* Tablet */
 
